@@ -9,7 +9,7 @@ import java.sql.*;
   
 public class Conexao {  
       
-    public static Connection conectar(){  
+    public Connection getConnection(){  
   
     try{  
   

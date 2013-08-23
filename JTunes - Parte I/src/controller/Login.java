@@ -1,6 +1,7 @@
 package controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -11,6 +12,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.swing.JOptionPane;
+
+
 
 import model.Conexao;
 
@@ -32,62 +35,68 @@ public class Login extends HttpServlet {
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 			
-		 String login = request.getParameter( "usuario" );
-	     String senha = request.getParameter( "senha" );
+		// String login = request.getParameter( "usuario" );
+	     //String senha = request.getParameter( "senha" );
+	     
+	     PrintWriter out = response.getWriter();
+		 out.println(getServletConfig().getInitParameter("login_administrador"));
+		 out.println(getServletConfig().getInitParameter("senha_administrador"));
 		
-		   Connection con = Conexao.conectar();  	  
+	}}	 //  Connection con = Conexao.conectar();  	  
 		  
-		   Statement stm = null ;
+		  // Statement stm = null ;
+		   
+		  
 		
-		   try {
+		 //  try {
 			
-			stm = con.createStatement();
+			//stm = con.createStatement();
 			
-			} catch (SQLException e) {
+		//	} catch (SQLException e) {
 			
-				e.printStackTrace();
-			}
+				//e.printStackTrace();
+			//}
 	         
-	         String SQL = "Select cod, nome, senha from Usuarios"; 
-
-	         ResultSet rs = null;
+	       //  String SQL = "Select cod, nome, senha from Usuarios"; 
+	         
+	        // ResultSet rs = null;
 			
-	        try {
+	       // try {
 				
-				rs = stm.executeQuery(SQL);
+			//	rs = stm.executeQuery(SQL);
 				
-				} catch (SQLException e) {
+			//	} catch (SQLException e) {
 				
-				e.printStackTrace();
-			}
+			//	e.printStackTrace();
+		//	}
 	         
 	        //Obtendo os dados do banco de dados.
-	        try {
-				while(rs.next())  
-				 {  
-					try {
-						int cod = rs.getInt("cod");
-						String user = rs.getString("nome"); 
-					   	int pass = rs.getInt("senha");
+	       // try {
+			//	while(rs.next())  
+			//	 {  
+				//	try {
+			//			int cod = rs.getInt("cod");
+				//		String user = rs.getString("nome"); 
+				//	   	int pass = rs.getInt("senha");
 					
 					  			   	
-					   	 response.sendRedirect( "admin.html" );
+				//	   	 response.sendRedirect( "admin.html" );
 			     
-				         //Conexao.desconectar(con); 
+				      //   Conexao.desconectar(con); 
 					   	
 					
-					} catch (SQLException e) {
+					//} catch (SQLException e) {
 						
-						e.printStackTrace();
-					}  
+					//	e.printStackTrace();
+					//}  
 
-				 }
-			} catch (SQLException e) {
+				// }
+		//	} catch (SQLException e) {
 				
-				e.printStackTrace();
-			}  
+			//	e.printStackTrace();
+	//		}  
 	        
-	}		
+	//}		
 	
 
 	
@@ -96,4 +105,4 @@ public class Login extends HttpServlet {
 
 	
 
-}
+//}

@@ -7,6 +7,17 @@
 		<display-name>Teste</display-name>
 		<servlet-name>Teste</servlet-name>
 		<servlet-class>controller.Teste</servlet-class>
+		
+		<init-param>
+			<param-name>login_administrador</param-name>
+			<param-value>admin</param-value>
+		</init-param>
+		
+		<init-param>
+			<param-name>senha_administrador</param-name>
+			<param-value>1234567890</param-value>
+		</init-param>
+		
 	</servlet>
 	<servlet>
 		<description>
