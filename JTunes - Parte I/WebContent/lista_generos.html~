@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>JTunes - Gêneros Musicais</title>
+
+<script type="text/javascript">
+<!--
+function MM_jumpMenu(targ,selObj,restore){ //v3.0
+  
+  window.open(document.getElementById('jumpMenu').value);
+}
+//-->
+</script>
+
+<link rel="stylesheet" href="estilo.css"> 
+</head>
+<body>
+
+	
+		<div id="topo">
+	
+		 <!-- Menu de navegacao do site -->
+
+		
+		<form action="JTunes" method="POST">
+			
+			 <select name="jumpMenu" size="1" id="jumpMenu" target= "_blank">
+		
+				<option value="lista_musicas.html">Músicas</option>
+				<option value="index.html">Álbuns</option>
+				<option value="lista_artistas.html">Artistas</option>
+				<option value="lista_generos.html" selected="true">Gêneros Musicais</option>
+																		
+			</select>		 		
+			 <input  type="submit" name="ok" id="ok" value="OK" onClick="MM_jumpMenu('parent',this,0)"/>	
+		
+		</form>
+		 
+			<a href="lista_musicas.html">Músicas | </a>
+			<a href="index.html">Álbuns |</a>
+  			<a href="lista_artistas.html">Artistas |</a>
+  			<a href="lista_generos.html">Gêneros |</a>
+  			<a href="login.html">JTunes Store</a>
+	  		
+		</div>	
+		
+		
+		
+		
+	
+		
+   	<div id="conteudo">
+
+			<p><h1>Gêneros Musicais</h1></p>
+			<p>
+			
+			<b>1 Gênero popular</b> 
+			1.1 Banda Sonora (ou Trilha Sonora)
+			1.1.1 Banda Sonora para o Cinema
+			1.1.2 Desenhos Animados
+			1.1.3 Banda Sonora para a Televisão
+			1.1.4 Gravações de Elenco
+			1.1.5 Musicais
+			<b> 1.2 Bluegrass</b> 
+			<b> 1.3 Blues</b> 
+			1.3.1 Blues britânico
+			1.3.2 Chicago Blues
+			1.3.3 Country Blues
+			1.3.4 Delta Blues
+			1.3.5 East Coast Blues
+			1.3.6 Harmonica Blues
+			1.3.7 Louisiana Blues
+			1.3.8 Blues Eléctricos Modernos
+			1.3.9 Texas Blues
+			1.3.10 Blues Eléctricos
+			1.3.11 Jump Blues/Piano Blues
+			1.4 Cajun
+			1.5 Celta
+			1.6 Comédia
+			1.6.1 Falada
+			1.6.2 Musical
+			<b> 1.7 Country</b> 
+			1.7.1 Alternativo
+			1.7.2 Contemporâneo
+			1.7.3 Country-Pop
+			1.7.4 Folk/Country Rock
+			1.7.5 Honky Tonk
+			1.7.6 Progressivo
+			1.7.7 Tradicional
+			1.7.8 Western
+			1.7.9 Easy Listening
+			1.7.10 Chill-out
+			1.7.11 Exótica/Lounge
+			1.8 Eletrônica
+			1.8.1 Dance
+			1.8.2 Goa Trance
+			1.8.3 Dark Trance
+			1.8.4 VGMusic
+			<b>1.9 Folk</b> 
+			1.9.1 Folk/Country Rock
+			1.9.2 Celtic/British Isles
+			1.9.3 Central Europe
+			1.9.4 North America
+			1.9.5 Western Europe
+			1.9.6 Traditional Folk
+			1.9.7 Contemporary Folk
+			1.10 Gospel
+			1.10.1 CCM/Contemporary Gospel
+			1.10.2 Traditional Gospel
+			1.11 Jazz
+			1.11.1 Big Band/Swing
+			1.11.2 Bop
+			1.11.3 Cool
+			1.11.4 Free Jazz
+			1.11.5 Fusion
+			1.11.6 Hard Bop
+			1.11.7 Latin Jazz/World Fusion
+			1.11.8 New Orleans/Classic Jazz
+			<b> 1.12 Rap</b> 
+			1.12.1 Hip-Hop/Urban
+			1.13 Reggae
+			1.13.1 Reggae/Caribbean
+			1.14 Rock'N'Roll
+			1.14.1 Hard Rock
+			1.14.2 Heavy Metal
+			1.14.3 Punk Rock
+			1.14.4 Rock Progressivo
+			1.14.5 Rock Psicodélico
+			1.14.6 Rock Experimental
+			<b> 	1.14.7 Alternativo/Indie</b> 
+			1.14.8 Pop Rock
+			1.14.9 Foreign Language Rock
+			1.15 Vocal
+			1.15.1 Cast Recordings
+			1.16 World
+			1.16.1 Latin Jazz/World Fusion
+			1.16.2 Worldbeat
+			1.16.3 Africa
+			1.16.4 Australasia
+			1.16.5 Celtic/British Isles
+			1.16.6 Reggae/Caribbean
+			1.16.7 Central Asia
+			1.16.8 Central Europe
+			1.16.9 Eastern Europe
+			1.16.10 = Far East
+			1.16.11 Latin America
+			1.16.12 Mediterranean
+			1.16.13 Middle East
+			1.16.14 Scandinavia
+					1.16.15 South Pacific
+			1.16.16 Western Europe
+			1.16.17 Foreign Language Rock
+			1.16.18 Tropical
+			1.16.18.1 South Asia
+			1.16.18.2 Southeast Asia
+			2 Género clássico
+			3 Outra classificação de gêneros e estilos
+			3.1 Música eletrônica
+			3.2 Música erudita
+			3.3 Música popular
+			</p>
+			
+		<div style="width:100%; height: 50%;">
+			 
+		</div>
+
+
+
+
+			
+ 					
+    		 	
+
+</div>
+
+
+
+
+
+
+			<div id="rodape">
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+			<h5>Instituto Federal de Educação Tecnológica da Paraíba
+			<br>Curso Superior de Tecnologia em Telemática
+			<br>Disciplina: Desenvolvimento Web
+			<br>Professor: César Rocha
+			<br>Desenvolvido Por Vanderson Diniz e Erick Silva
+			<br>Copyright © 2013. 			
+			</h5>
+			
+			
+		</div>
+
+
+	
+
+
+
+</body>
+</html>

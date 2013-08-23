@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>JTunes</title>
+
+<script type="text/javascript">
+<!--
+function MM_jumpMenu(targ,selObj,restore){ //v3.0
+  
+  window.open(document.getElementById('jumpMenu').value);
+}
+//-->
+</script>
+
+<link rel="stylesheet" href="estilo.css"> 
+</head>
+<body>
+
+	
+		<div id="topo">
+	
+		 <!-- Menu de navegacao do site -->
+
+		
+		<form action="JTunes" method="POST">
+			
+			 <select name="jumpMenu" size="1" id="jumpMenu" target= "_blank">
+		
+				<option value="lista_musicas.html">Músicas</option>
+				<option value="index.html" selected="true">Álbuns</option>
+				<option value="lista_artistas.html">Artistas</option>
+				<option value="lista_generos.html">Gêneros Musicais</option>
+				
+														
+			</select>		 		
+			 <input  type="submit" name="ok" id="ok" value="OK" onClick="MM_jumpMenu('parent',this,0)"/>	
+		
+		</form>
+		 
+			<a href="lista_musicas.html">Músicas | </a>
+			<a href="index.html">Álbuns |</a>
+  			<a href="lista_artistas.html">Artistas |</a>
+  			<a href="lista_generos.html">Gêneros |</a>
+  				
+	  		<a href="login.html">JTunes Store</a>
+	  		
+		</div>	
+		
+		
+		
+		
+	
+		
+   	<div id="conteudo">
+
+
+		<div style="width:100%; height: 50%;">
+			 <img src="Imagens/01.jpg">
+			 <img src="Imagens/02.jpg">
+			 <img src="Imagens/03.jpg">
+			 <img src="Imagens/04.jpg">
+			 <img src="Imagens/05.jpg">
+			 <img src="Imagens/06.jpg">
+			 <br>
+			 <img src="Imagens/07.jpg">
+			 <img src="Imagens/08.jpg">
+			 <img src="Imagens/09.jpg">
+			 <img src="Imagens/10.jpg">
+			 <img src="Imagens/11.jpg">
+			 <img src="Imagens/12.jpg">
+			 <br>
+			  <img src="Imagens/13.jpg">
+			 <img src="Imagens/14.jpg">
+			 <img src="Imagens/15.jpg">
+			 <img src="Imagens/16.jpg">
+			 <img src="Imagens/17.jpg">
+			 <a href="www.google.com.br"> <img src="Imagens/18.jpg"> </a>
+		</div>
+
+
+
+
+			
+ 					
+    		 	
+
+</div>
+
+
+
+
+
+
+			<div id="rodape">
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+			<h5>Instituto Federal de Educação Tecnológica da Paraíba
+			<br>Curso Superior de Tecnologia em Telemática
+			<br>Disciplina: Desenvolvimento Web
+			<br>Professor: César Rocha
+			<br>Desenvolvido Por Vanderson Diniz e Erick Silva
+			<br>Copyright © 2013. 			
+			</h5>
+			
+			
+		</div>
+
+
+	
+
+
+
+</body>
+</html>

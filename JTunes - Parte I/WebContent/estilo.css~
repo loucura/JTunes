@@ -1,0 +1,40 @@
+body {
+			width: 100%;
+			margin:0;
+			padding:0;
+			background:#FFFFF0;
+			text-align:center; /* hack para o IE */
+		}
+
+#topo{
+			width: 100%;
+			margin-top: 0 auto;
+			background-color: #FFFFF0;	
+			text-decoration: none;
+		}
+
+
+#conteudo {
+				padding: 10px;
+				background-color: #FFFFF0
+			}
+			
+			
+
+#rodape {
+			width: 100%;			
+			position: absolute;;
+			margin-bottom: 0 auto;  
+			background-color: #FFFFF0;
+	}
+
+
+
+
+
+
+#tudo {
+				width: 760px;
+				text-align:left; /* "remédio" para o hack do IE */ 
+				background-color: aliceblue;
+		}
