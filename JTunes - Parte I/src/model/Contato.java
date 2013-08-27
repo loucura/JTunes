@@ -1,19 +1,18 @@
 package model;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
+
 import java.sql.SQLException;
-import java.util.Calendar;
+
 
 
 
 public class Contato {
 
-	private	Long cod;
+	private	int cod;
 	private	String nome;
 	private	String email;
 	private	String endereco;
-	private	Calendar data_nascimento;
+	
 
 	
 	// métodos get e set para id, nome, email, endereço e dataNascimento
@@ -47,56 +46,38 @@ public class Contato {
 		this.endereco = novo;
 	}
 	
-	public Long getCod() 
+	public int getCod() 
 	{
 		
 		return this.cod;
 	}
 	
-	public void setCod(Long novo) 
+	public void setCod(int novo) 
 	{
 		this.cod = novo;
 	}
 	
-	public Calendar getDataNascimento() 
-	{
-		return this.data_nascimento ;
-	}
-	
-	public void setDataNascimento(Calendar data_nascimento ) 
-	{
-	
-		this.data_nascimento = data_nascimento ;
-	}
-	
+		
 	
 	public static void main(String[] args) throws SQLException
 	{
-		Connection con = new ConnectionFactory().getConnection();
-		String SQL = "insert into Contatos" + " (nome,email,endereco,data_nascimento)" +	"values (?,?,?,?)";
-		PreparedStatement stmt = con.prepareStatement(SQL);
+		//Gravar Contatos no Banco de Dados
+		Contato contato = new Contato();
+		contato.setNome("Teste");
+		contato.setEmail("testando@mail.com	");
+		contato.setEndereco("Rua");
 		
-		// preenchendo os valores no banco de dados
-		stmt.setString(1, "Vanderson");
-		stmt.setString(2, "contato@vanderson");
-		stmt.setString(3, "Rua Sem Nome");
-
-		//Gravando a data no banco de dados. Pode servir futuramente para detalhar compras...etc...
-		java.sql.Date data = new java.sql.Date(Calendar.getInstance().getTimeInMillis());
-		stmt.setDate(4, data);
+		//Grava a partir dessa Classe
+		DAO bd = new DAO();
+		//Chama a Classe DAO para a inserção dos dados no BD
+		bd.adicionaContato(contato);
 		
-		//Executa os comandos no banco de dados
-		stmt.execute();
-
-		stmt.close();
-		System.out.println("Dados Gravados com Sucesso!");
-		con.close();
-
-	
-	
+		//Pesquisa um contato no banco de dados
+		//bd.pesquisaContato(contato);
+		
+		//REMOVE CONTATO
+		//bd.removeContato(contato);
 	
 	}
-
-	
 //Fecha a classe
 }

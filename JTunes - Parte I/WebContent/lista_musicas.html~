@@ -27,8 +27,8 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
 			
 			 <select name="jumpMenu" size="1" id="jumpMenu" target= "_blank">
 		
-				<option value="lista_musicas.html">Músicas</option>
-				<option value="index.html" selected="true">Álbuns</option>
+				<option value="lista_musicas.html" selected="true">Músicas</option>
+				<option value="index.html">Álbuns</option>
 				<option value="lista_artistas.html">Artistas</option>
 				<option value="lista_generos.html">Gêneros Musicais</option>
 																		

@@ -20,10 +20,9 @@ public class ConnectionFactory {
 		catch (SQLException e) 
 		{
 			throw new RuntimeException(e);
-			
+	
 		}
 
-		
 	}
 	
 	public static void Main (String[]args) throws SQLException
@@ -31,7 +30,6 @@ public class ConnectionFactory {
 		Connection connection = new ConnectionFactory().getConnection();
 		System.out.println("Conexão bem-sucedida!");
 		connection.close();
-		
 	}
     
     

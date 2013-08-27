@@ -31,7 +31,7 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
 				<option value="index.html">Álbuns</option>
 				<option value="lista_artistas.html"  selected="true">Artistas</option>
 				<option value="lista_generos.html">Gêneros Musicais</option>
-				<option value="lista_videos.html">Vídeos</option>
+				
 														
 			</select>		 		
 			 <input  type="submit" name="ok" id="ok" value="OK" onClick="MM_jumpMenu('parent',this,0)"/>	

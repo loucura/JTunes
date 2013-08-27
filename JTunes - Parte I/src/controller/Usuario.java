@@ -1,13 +1,12 @@
 package controller;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
+
 import java.sql.SQLException;
-import java.util.Calendar;
+import java.util.Scanner;
 
-import org.eclipse.jdt.internal.compiler.parser.Scanner;
+import com.sun.xml.internal.ws.api.pipe.NextAction;
 
-import model.ConnectionFactory;
+import model.DAO;
 
 
 
@@ -15,10 +14,10 @@ public class Usuario {
 
 	private	Long cod;
 	private	String nome;
-	private	Long senha;
+	private	String senha;
 
 	
-	// métodos get e set para id, nome, email, endereço e dataNascimento
+	
 	public String getNome() 
 	{
 		return this.nome;
@@ -40,13 +39,13 @@ public class Usuario {
 		this.cod = novo;
 	}
 	
-	public Long getSenha() 
+	public String getSenha() 
 	{
 		
 		return this.senha;
 	}
 	
-	public void setSenha(Long nova_senha) 
+	public void setSenha(String nova_senha) 
 	{
 		this.senha = nova_senha;
 	}
@@ -54,25 +53,32 @@ public class Usuario {
 	
 	public static void main(String[] args) throws SQLException
 	{
-		Connection con = new ConnectionFactory().getConnection();
-		String SQL = "insert into Usuarios" + " (nome,senha)" +	"values (?,?)";
-		PreparedStatement stmt = con.prepareStatement(SQL);
 		
-				
-		// preenchendo os valores no banco de dados
-		stmt.setString(1, "vanderson");
-		stmt.setString(2, "123456");
 		
-		//Executa os comandos no banco de dados
-		stmt.execute();
-
-		stmt.close();
-		System.out.println("Dados Gravados com Sucesso!");
-		con.close();
-
-	
-	
-	
+		//Gravar Contatos no Banco de Dados
+		Usuario user = new Usuario();
+		
+		Scanner sc = new Scanner(System.in);
+		String nome,senha;
+		
+		System.out.println("É aqui que vai ler o nome para adicionar ao BD");
+		nome = sc.nextLine();
+		user.setNome(nome);
+		
+		System.out.println("E aqui a senha");
+		senha = sc.nextLine();		
+		user.setSenha(senha);
+		
+		//Grava a partir dessa Classe
+		DAO bd = new DAO();
+		//Chama a Classe DAO para a inserção dos dados no BD
+		bd.adicionaUsuario(user);
+		
+		
+		//PESQUISA USUÁRIO NO BANCO DE DADOS
+		bd.pesquisaUsuario(user);
+		
+			
 	}
 
 	
