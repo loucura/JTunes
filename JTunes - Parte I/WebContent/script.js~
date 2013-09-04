@@ -1,0 +1,48 @@
+<script language="javascript" type="text/javascript">
+
+	function validar()
+	{
+		var nome  = form1.nome.value;
+		var email = form1.email.value;
+		var endereco = form1.endereco.value;
+		var empresa = form1.empresa.value;
+		var mensagem = form1.mensagem.value;		
+		
+
+		if (nome == "")
+		{	
+			alert('Campo "nome" em branco');
+			form1.nome.focus();	
+			return false;
+		}
+
+		if (nome < 2) 
+		{
+			alert('Seu nome só tem duas letras?');
+			form1.nome.focus();
+			return false;
+		}
+ 
+
+	}
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

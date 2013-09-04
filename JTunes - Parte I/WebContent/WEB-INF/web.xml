@@ -47,6 +47,67 @@
 		<servlet-name>ServletContato</servlet-name>
 		<servlet-class>controller.ServletContato</servlet-class>
 	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>MostraDadosServlet</display-name>
+		<servlet-name>MostraDadosServlet</servlet-name>
+		<servlet-class>controller.MostraDadosServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>Entrar</display-name>
+		<servlet-name>Entrar</servlet-name>
+		<servlet-class>controller.Entrar</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>ServletFuncionario</display-name>
+		<servlet-name>ServletFuncionario</servlet-name>
+		<servlet-class>controller.ServletFuncionario</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>ServletUsuario</display-name>
+		<servlet-name>ServletUsuario</servlet-name>
+		<servlet-class>controller.ServletUsuario</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>ServletCadastrar</display-name>
+		<servlet-name>ServletCadastrar</servlet-name>
+		<servlet-class>controller.ServletCadastrar</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>ServletAdicionaUsuario</display-name>
+		<servlet-name>ServletAdicionaUsuario</servlet-name>
+		<servlet-class>controller.ServletAdicionaUsuario</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>ServletRemoveUsuario</display-name>
+		<servlet-name>ServletRemoveUsuario</servlet-name>
+		<servlet-class>controller.ServletRemoveUsuario</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>ServletPesquisaUsuario</display-name>
+		<servlet-name>ServletPesquisaUsuario</servlet-name>
+		<servlet-class>controller.ServletPesquisaUsuario</servlet-class>
+	</servlet>
+	
+	
+	
+	
+	
 	<servlet-mapping>
 		<servlet-name>Teste</servlet-name>
 		<url-pattern>/Teste</url-pattern>
@@ -67,6 +128,53 @@
 		<servlet-name>ServletContato</servlet-name>
 		<url-pattern>/ServletContato</url-pattern>
 	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>MostraDadosServlet</servlet-name>
+		<url-pattern>/MostraDadosServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Entrar</servlet-name>
+		<url-pattern>/Entrar</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ServletFuncionario</servlet-name>
+		<url-pattern>/ServletFuncionario</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ServletUsuario</servlet-name>
+		<url-pattern>/ServletUsuario</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ServletCadastrar</servlet-name>
+		<url-pattern>/ServletCadastrar</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ServletAdicionaUsuario</servlet-name>
+		<url-pattern>/ServletAdicionaUsuario</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ServletRemoveUsuario</servlet-name>
+		<url-pattern>/ServletRemoveUsuario</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ServletPesquisaUsuario</servlet-name>
+		<url-pattern>/ServletPesquisaUsuario</url-pattern>
+	</servlet-mapping>
+	
+	
+	<error-page>
+		<exception-type>java.lang.Exception</exception-type>
+		<location>/erro.html</location>
+	</error-page>
+	
+	<error-page>
+		<error-code>404</error-code>
+		<location>/404.html</location>
+	</error-page>
+	
+	
+	
+	
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
 		<welcome-file>index.htm</welcome-file>

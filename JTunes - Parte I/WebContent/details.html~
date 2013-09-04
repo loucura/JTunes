@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+
+<title>JTunes - Desenvolvimento Web</title>
+
+<link rel="stylesheet" type="text/css" href="style.css" />
+<!--[if IE 6]>
+<link rel="stylesheet" type="text/css" href="iecss.css" />
+<![endif]-->
+
+<script type="text/javascript" src="js/boxOver.js"></script>
+
+<script>
+
+PositionX = 100;
+PositionY = 100;
+
+
+defaultWidth  = 500;
+defaultHeight = 500;
+var AutoClose = true;
+
+if (parseInt(navigator.appVersion.charAt(0))>=4){
+var isNN=(navigator.appName=="Netscape")?1:0;
+var isIE=(navigator.appName.indexOf("Microsoft")!=-1)?1:0;}
+var optNN='scrollbars=no,width='+defaultWidth+',height='+defaultHeight+',left='+PositionX+',top='+PositionY;
+var optIE='scrollbars=no,width=150,height=100,left='+PositionX+',top='+PositionY;
+function popImage(imageURL,imageTitle){
+if (isNN){imgWin=window.open('about:blank','',optNN);}
+if (isIE){imgWin=window.open('about:blank','',optIE);}
+with (imgWin.document){
+writeln('<html><head><title>Loading...</title><style>body{margin:0px;}</style>');writeln('<sc'+'ript>');
+writeln('var isNN,isIE;');writeln('if (parseInt(navigator.appVersion.charAt(0))>=4){');
+writeln('isNN=(navigator.appName=="Netscape")?1:0;');writeln('isIE=(navigator.appName.indexOf("Microsoft")!=-1)?1:0;}');
+writeln('function reSizeToImage(){');writeln('if (isIE){');writeln('window.resizeTo(300,300);');
+writeln('width=300-(document.body.clientWidth-document.images[0].width);');
+writeln('height=300-(document.body.clientHeight-document.images[0].height);');
+writeln('window.resizeTo(width,height);}');writeln('if (isNN){');       
+writeln('window.innerWidth=document.images["George"].width;');writeln('window.innerHeight=document.images["George"].height;}}');
+writeln('function doTitle(){document.title="'+imageTitle+'";}');writeln('</sc'+'ript>');
+if (!AutoClose) writeln('</head><body bgcolor=ffffff scroll="no" onload="reSizeToImage();doTitle();self.focus()">')
+else writeln('</head><body bgcolor=ffffff scroll="no" onload="reSizeToImage();doTitle();self.focus()" onblur="self.close()">');
+writeln('<img name="George" src='+imageURL+' style="display:block"></body></html>');
+close();		
+}}
+
+</script>
+</head>
+<body>
+
+<div id="main_container">
+
+	<div id="header">
+
+       <div class="top_right">
+       
+            
+        
+        </div>
+    
+  
+       
+        
+
+        
+
+    </div>
+    
+   <div id="main_content"> 
+   
+            <div id="menu_tab">
+                    <ul class="menu">
+                         <li><a href="index.html" class="nav">  Home </a></li>
+                         <li class="divider"></li>
+                         <li><a href="#" class="nav">Músicas</a></li>
+                         <li class="divider"></li>
+                         <li><a href="#" class="nav">Ofertas</a></li>
+                         <li class="divider"></li>
+                         <li><a href="#" class="nav">Restrito</a></li>
+                         <li class="divider"></li>
+                         <li><a href="#" class="nav">Navegar</a></li>
+                         <li class="divider"></li>                         
+                         <li><a href="login.html" class="nav">Login </a></li>
+                         <li class="divider"></li>
+                         <li><a href="contact.html" class="nav">Contato</a></li>
+
+                    </ul>
+
+            </div><!-- end of menu tab -->
+            
+    <div class="crumb_navigation">
+    Menu: <span class="current">Home</span>
+    
+    </div>              
+    
+   <div class="left_content">
+    <div class="title_box">Categorias</div>
+    
+        <ul class="left_menu">
+        <li class="odd"><a href="details.html">Rock</a></li>
+        <li class="even"><a href="details.html">Samba</a></li>
+         <li class="odd"><a href="details.html">Pagode</a></li>
+        <li class="even"><a href="details.html">Axé</a></li>
+         <li class="odd"><a href="details.html">Clássica</a></li>
+         <li class="even"><a href="details.html">Forró</a></li>
+        <li class="odd"><a href="details.html">Funk</a></li>
+        <li class="even"><a href="details.html">Música Eletrônica</a></li>
+         <li class="odd"><a href="details.html">Lambada</a></li>
+         </ul> 
+        
+      <div class="title_box">Promoções</div>  
+     <div class="border_box">
+         <div class="product_title"><a href="details.html">Você quer este CD?</a></div>
+         <div class="product_img"><a href="details.html"><img src="images/04.jpg" alt="" title="" border="0" /></a></div>
+         <div class="prod_price"><span class="reduce">R$3.50</span> <span class="price">R$2.70</span></div>
+     </div>  
+     
+     
+     <div class="title_box">Novidades</div>  
+     <div class="border_box">
+		<input type="text" name="newsletter" class="newsletter_input" value="digite seu email"/>
+        <a href="#" class="join">Assinar</a>
+     </div>  
+     
+     <div class="banner_adds">
+     
+     <a href="#"><img src="images/02.jpg" alt="" title="" border="0" /></a>
+     </div>    
+        
+    
+   </div><!-- end of left content --> 
+
+
+
+   <div class="center_content">
+   
+
+   
+   
+   	<div class="center_title_bar">Makita 156 MX-VL</div>
+    
+    	<div class="prod_box_big">
+
+            <div class="center_prod_box_big">            
+                 
+                 <div class="product_img_big">
+                 <a href="javascript:popImage('images/09.jpg','Some Title')" title="header=[Zoom] body=[&nbsp;] fade=[on]"><img src="images/09.jpg" alt="" title="" border="0" /></a>
+                 
+                 </div>
+                     <div class="details_big_box">
+                         <div class="product_title_big">The Fray</div>
+                         <div class="specifications">
+                            Disponibilidade: <span class="blue">Em estoque</span><br />
+
+                            Garantia: <span class="blue">24 horas</span><br />
+                            
+                            Transporte: <span class="blue">
+                            Companhia de Serviços de Entrega</span><br />
+                            
+                            Inclui :<span class="blue"> Minha assinatura</span><br />
+                            Descrição :<span class="blue"> Essa é a descrição do cd que você está vendo ao lado. Se gostou, compre. Senão, baixe da 				    internet e seja feliz.
+				</span><br />
+                         </div>
+                         <div class="prod_price_big"><span class="reduce">R$3.50</span> <span class="price">R$2.70</span></div>
+                         
+
+                         <a href="details.html" class="prod_buy">Comprar</a>
+                         <a href="#" class="prod_compare">Descartar</a>
+                     </div>                        
+            </div>
+                              
+        </div>
+    
+   
+   </div><!-- end of center content -->
+
+
+
+<div class="right_content">
+ 
+      <div class="title_box">Procurar</div>  
+     <div class="border_box">
+		<input type="text" name="newsletter" class="newsletter_input" value="palavra-chave"/>
+        <a href="#" class="join">procurar</a>
+     </div>  
+     
+
+     
+ 
+   		<div class="shopping_cart">
+        	<div class="title_box">Itens</div>
+            
+            <div class="cart_details">
+            3 items <br />
+            <span class="border_cart"></span>
+            Total: <span class="price">R$3.50</span>
+            </div>
+            
+            <div class="cart_icon"><a href="#" title=""><img src="images/shoppingcart.png" alt="" title="" width="35" height="35" border="0" /></a></div>
+        
+        </div>
+   
+   
+     <div class="title_box">Novidades</div>  
+     <div class="border_box">
+         <div class="product_title"><a href="details.html">Swingueira do Negão</a></div>
+         <div class="product_img"><a href="details.html"><img src="images/15.jpg" alt="" title="" border="0" /></a></div>
+         <div class="prod_price"><span class="reduce">R$3.50</span> <span class="price">R$2.70</span></div>
+     </div>  
+     
+     
+     
+    <div class="title_box">Você Também Pode Gostar</div>
+    
+        <ul class="left_menu">
+        <li class="odd"><a href="services.html">Bach</a></li>
+        <li class="even"><a href="services.html">Vivaldi</a></li>
+         <li class="odd"><a href="services.html">Mozart</a></li>
+        <li class="even"><a href="services.html">Beethoven</a></li>
+         <li class="odd"><a href="services.html">Wagner</a></li>
+       </ul>      
+     
+     <div class="banner_adds">
+     
+     <a href="#"><img src="images/18.jpg" alt="" title="" border="0" /></a>
+     </div>        
+     
+   </div><!-- end of right content -->   
+
+
+            
+   </div><!-- end of main content -->
+   
+   
+   
+   <div class="footer">
+   
+
+        <div class="left_footer">
+       <!-- <img src="images/footer_logo.png" alt="" title="" width="89" height="42"/> -->
+        </div>
+        
+        <div class="center_footer">
+        JTunes. Todos os Direitos Reservados 2013
+        </div>
+        
+        <div class="right_footer">
+        <a href="index.html">Início</a>
+        <a href="details.html">Sobre</a>
+        <a href="details.html">Mapa do Site</a>
+        <a href="details.html">RSS</a>
+        <a href="contact.html">Contato</a>
+        
+        </div>   
+   
+   </div>                 
+
+
+</div>
+<!-- end of main_container -->
+</body>
+</html>

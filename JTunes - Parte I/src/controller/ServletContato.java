@@ -12,6 +12,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.swing.JApplet;
+import javax.swing.JOptionPane;
 
 import org.omg.CORBA.DATA_CONVERSION;
 
@@ -42,7 +44,9 @@ public class ServletContato extends HttpServlet {
 				String name = request.getParameter("nome");
 				String mail = request.getParameter("email");
 				String end = request.getParameter("endereco");
-				
+				String telefone = request.getParameter("telefone");
+				String empresa = request.getParameter("empresa");
+				String mensagem = request.getParameter("mensagem");
 
 				//CRIA UM CONTATO DA CLASSE NO SERVLET
 				Contato contato = new Contato();
@@ -50,19 +54,18 @@ public class ServletContato extends HttpServlet {
 				contato.setNome(name);
 				contato.setEmail(mail);
 				contato.setEndereco(end);
+				contato.setTelefone(telefone);
+				contato.setEmpresa(empresa);
+				contato.setMensagem(mensagem);
 				
 				//CHAMA A CLASSE DE CONEXÃO DAO
 				DAO dao = new DAO();
 				dao.adicionaContato(contato);
 
+				response.sendRedirect( "contact.html" );
 	
-				// CRIAR UMA PÁGINA HTML PARA ESSA SAÍDA
-				//out.println("<html>");
-				//out.println("<body>");
-				//out.println("Contato  " + contato.getNome() + " adicionado com sucesso");
-				//out.println("</body>");
-				//out.println("</html>");
-					
+			    
+				
 
 	}
 	

@@ -12,6 +12,9 @@ public class Contato {
 	private	String nome;
 	private	String email;
 	private	String endereco;
+	private String empresa;
+	private String telefone;
+	private String mensagem;
 	
 
 	
@@ -45,6 +48,38 @@ public class Contato {
 	{
 		this.endereco = novo;
 	}
+	
+	
+	public String getEmpresa() 
+	{
+		return this.empresa;
+	}
+	
+	public void setEmpresa(String novo) 
+	{
+		this.empresa = novo;
+	}
+	
+	public String getTelefone() 
+	{
+		return this.telefone;
+	}
+	
+	public void setTelefone(String novo) 
+	{
+		this.telefone = novo;
+	}
+	
+	public String getMensagem() 
+	{
+		return this.mensagem;
+	}
+	
+	public void setMensagem(String novo) 
+	{
+		this.mensagem = novo;
+	}
+	
 	
 	public int getCod() 
 	{
