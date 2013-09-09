@@ -86,27 +86,23 @@ close();
                      <div class="details_big_box">
                                                  
                             
-                          <form action="XXXXXXXXXXXXXXXXX" method="post" name="adicionarproduto">     
+                          <form action="ServletAdicionarMP3" method="post" name="adicionarproduto">     
                             <div class="form_row">
                    				 <label class="contact"><strong>Nome:</strong></label>
-                    				 <input type="text" class="contact_input" name="nome" />
+                    				 <input type="text" class="contact_input" name="nome" size="20"/>
                    			 </div>
                    			 
                    			 
                    			 <div class="form_row">
-                   				 <label class="contact"><strong>Tipo:</strong></label>
-                    				 <input type="text" class="contact_input" name="tipo" />
+                   				 <label class="contact"><strong>Preço:</strong></label>
+                    				 <input type="text" class="contact_input" name="preco" size="10" value="R$ " />
                    			 </div>
                    			 
-                   			 <div class="form_row">
-                   				 <label class="contact"><strong>Código:</strong></label>
-                    				 <input type="number" class="contact_input" name="codigo" />
-                   			 </div>
-                   	    
-									  <div class="form_row">
-                   					<input value="Enviar" type="submit" />	
-                   					<input type="reset" />
-										</div>  
+                   		                   	    
+						  <div class="form_row">
+                   			<input value="Enviar" type="submit" />	
+                   			<input type="reset" />
+						</div>  
 										
 										
 																

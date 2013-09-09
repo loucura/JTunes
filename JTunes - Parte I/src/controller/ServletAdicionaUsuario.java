@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.swing.JOptionPane;
 
+import sun.swing.BakedArrayList;
+import exceptions.UsuarioException;
 import model.DAO;
 import model.Funcionario;
 import model.Usuario;
@@ -39,6 +41,7 @@ public class ServletAdicionaUsuario extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		Usuario user = new Usuario();
 		
 		PrintWriter out = response.getWriter();
 		response.setContentType("text/html"); //Define o tipo dos dados
@@ -46,19 +49,16 @@ public class ServletAdicionaUsuario extends HttpServlet {
 		String nome = request.getParameter( "nome" ); 
 		String pass = request.getParameter( "senha" ); 
 		String cpf = request.getParameter("cpf");	
-				
-		Usuario user = new Usuario();
-		user.setNome(nome);
+						
+		user.setNome(nome);		
 		user.setSenha(pass);
 		user.setCPF(cpf);
 		
+
 		DAO dao = new DAO();
 		dao.adicionaUsuario(user);	
-				
+		
 		response.sendRedirect( "cadastrar.html" );
-		
-		
-		
 	}
 
 }

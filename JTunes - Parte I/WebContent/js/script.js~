@@ -9,6 +9,11 @@
 		var empresa = form1.empresa.value;
 		var mensagem = form1.mensagem.value;		
 
+
+		//validar email(verificao de endereco eletrônico)
+		parte1 = d.email.value.indexOf("@");
+		parte2 = d.email.value.indexOf(".");
+		parte3 = d.email.value.length;
 		
 
 		if (d.nome.value == "")
@@ -32,24 +37,22 @@
 			alert('Preencha corretamente o email');
 			d.email.focus();
 			return false;
-	
+		
+		
+
+		if (!(d.email.value.indexOf("@") >= 3 && d.email.value.indexOf(".") >= 0 && d.email.value.length >= 9)) 
+		{
+
+     				alert ("O Campo " + d.email.name + " Deve Conter um endereço válido!");
+           			d.email.focus();
+              			return false;
 		}
+
+	}
 
 
 
 		
-		var entrada = entrada.email;
-		var arroba = entrada.value.indexOf('@');
-		var ponto = entrada.value.substring(arroba + 1, entrada.length);
-		for (var i = 0; i < ponto.length; i++) {
-		if (ponto.charAt(i) == ".") {
-		break
-		}
-		}
-		if (entrada.value.length <= 0) {
-		alert("Email inválido!");
-		d.email.focus();
-		return false
 
 
 		

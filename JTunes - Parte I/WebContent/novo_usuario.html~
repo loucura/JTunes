@@ -130,6 +130,10 @@ close();
                    				<input type="reset" />
 							</div>  
 
+						<div class="form_row">
+                   				 <li class="odd"><a href="cadastrar.html">Voltar</a></li>
+					</div>
+
 					</form>		
 
 					

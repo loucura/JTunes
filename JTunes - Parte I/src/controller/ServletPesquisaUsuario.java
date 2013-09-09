@@ -44,15 +44,14 @@ public class ServletPesquisaUsuario extends HttpServlet {
 		
 		String cpf = request.getParameter( "cpf" ); 
 	
-		
 		Usuario user = new Usuario();
 		user.setCPF(cpf);
+		
 				
 		DAO bd = new DAO();
 		bd.pesquisaUsuario(user);	
 		
-		response.sendRedirect("cadastrar.html");
-		
+		response.sendRedirect("pesquisar_usuario.html");
 		
 		
 		

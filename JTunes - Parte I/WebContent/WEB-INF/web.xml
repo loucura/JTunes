@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<web-app id="WebApp_ID" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+<?xml version="1.0" encoding="UTF-8"?><web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="WebApp_ID" version="2.4" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
 	<display-name>JTunes - Parte I</display-name>
 	<servlet>
 		<description>
@@ -17,6 +16,15 @@
 			<param-name>senha_administrador</param-name>
 			<param-value>1234567890</param-value>
 		</init-param>
+		
+		
+		<init-param>
+			<param-name>PATH</param-name>
+			<param-value>/home/vanderson/git/JTunes - Parte I/JTunes - Parte I/Músicas</param-value>
+		</init-param>
+		
+		
+		
 		
 	</servlet>
 	<servlet>
@@ -103,6 +111,40 @@
 		<servlet-name>ServletPesquisaUsuario</servlet-name>
 		<servlet-class>controller.ServletPesquisaUsuario</servlet-class>
 	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>ServletAdicionProduto</display-name>
+		<servlet-name>ServletAdicionProduto</servlet-name>
+		<servlet-class>controller.ServletAdicionProduto</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>ServletAdicionarMP3</display-name>
+		<servlet-name>ServletAdicionarMP3</servlet-name>
+		<servlet-class>controller.ServletAdicionarMP3</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>ServletRemoveMP3</display-name>
+		<servlet-name>ServletRemoveMP3</servlet-name>
+		<servlet-class>controller.ServletRemoveMP3</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>ServletPesquisarMP3</display-name>
+		<servlet-name>ServletPesquisarMP3</servlet-name>
+		<servlet-class>controller.ServletPesquisarMP3</servlet-class>
+	</servlet>
+    <servlet>
+        <description/>
+        <display-name>ServletPagamento</display-name>
+        <servlet-name>ServletPagamento</servlet-name>
+        <servlet-class>controller.ServletPagamento</servlet-class>
+    </servlet>
 	
 	
 	
@@ -160,6 +202,26 @@
 		<servlet-name>ServletPesquisaUsuario</servlet-name>
 		<url-pattern>/ServletPesquisaUsuario</url-pattern>
 	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ServletAdicionProduto</servlet-name>
+		<url-pattern>/ServletAdicionProduto</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ServletAdicionarMP3</servlet-name>
+		<url-pattern>/ServletAdicionarMP3</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ServletRemoveMP3</servlet-name>
+		<url-pattern>/ServletRemoveMP3</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ServletPesquisarMP3</servlet-name>
+		<url-pattern>/ServletPesquisarMP3</url-pattern>
+	</servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletPagamento</servlet-name>
+        <url-pattern>/ServletPagamento</url-pattern>
+    </servlet-mapping>
 	
 	
 	<error-page>

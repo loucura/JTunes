@@ -1,7 +1,10 @@
 package model;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
@@ -11,6 +14,8 @@ import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
 import com.mysql.jdbc.Statement;
+
+import exceptions.UsuarioException;
 
 public class DAO {
 	
@@ -28,6 +33,7 @@ public class DAO {
 	public void adicionaContato(Contato contato) {String sql = "insert into Contatos " 
 	//+ contato.getNome() + contato.getEmail() + contato.getEndereco() + " values (?,?,?,?)";
 	+ "(nome,email,endereco,telefone,empresa,mensagem)" + "values (?,?,?,?,?,?)"; 
+	
 	
 		try 
 		{
@@ -123,6 +129,7 @@ public class DAO {
 		//+ contato.getNome() + contato.getEmail() + contato.getEndereco() + " values (?,?,?,?)";
 		+ "(nome,senha,cpf)" + "values (?,?,?)"; 
 		
+			
 			try 
 			{
 				//Preparando para a Inserção de Dados
@@ -153,60 +160,64 @@ public class DAO {
 		}
 	
 	
-	//PESQUISA USUÁRIO NO BANCO DE DADOS
-	public void pesquisaUsuario(Usuario usuario) 
-	{
-				
-		try 
+		//PESQUISA USUÁRIO NO BANCO DE DADOS
+		public void pesquisaUsuario(Usuario usuario) 
 		{
-			//Preparando para a Inserção de Dados
-			Connection con = new ConnectionFactory().getConnection();
-			PreparedStatement stmt = con.prepareStatement("select * from Usuarios");
-			
-			//Executa no Banco de Dados
-			ResultSet rs = stmt.executeQuery();
-			
-			//Enquanto...
-			if (rs.next()) 
+
+			try 
 			{
-				String CPF = rs.getString(4);	
-				
-					if (usuario.getCPF().equals(CPF))
-					{	
-						String cod = rs.getString(1);
-						String nome = rs.getString(2);
-						String senha = rs.getString(3);
-						
-						JOptionPane.showMessageDialog(null, " Usuário Encontrado\n "   
-								 							 + "\nCódigo: " + cod  
-								 							 + "\nNome : " + nome
-								 							 + "\nSenha: " + senha); 
-						
-						 
-					}
-					else
-					{	
-						JOptionPane.showMessageDialog(null, "Este CPF Não Consta No Sistema");
-					}
-						
+				//Preparando para a Inserção de Dados
+				Connection con = new ConnectionFactory().getConnection();
+				PreparedStatement stmt = con.prepareStatement("select * from Usuarios");
+
+				//Executa no Banco de Dados
+				ResultSet rs = stmt.executeQuery();
+
+				//Enquanto...
+				while (rs.next()) 
+				{
 					
-			}
-			
-			rs.close();
-			stmt.close();
-			con.close();
-			
-			
-		} 
-			
-		catch (SQLException e) 
-			{
-				throw new RuntimeException(e);
-			}
-		
-				
-				
-	}
+					String cod = rs.getString(1);
+					String nome = rs.getString(2);
+					String senha = rs.getString(3);
+					String CPF = rs.getString(4);	
+
+						if (usuario.getCPF().equals(rs.getString(4)))
+						{	
+							
+
+							JOptionPane.showMessageDialog(null, "**** Usuário Encontrado ****\n "   
+									 							 + "\nCódigo: " + cod  
+									 							 + "\nNome: " + nome
+									 							 + "\nSenha: " + senha
+									 							 + "\nC.P.F.: " + CPF
+																);						
+
+						}
+						//SE PASSAR UM USUÁRIO QUE NÃO EXISTE? O QUE FAZER?
+						//else
+						//{	
+						//	JOptionPane.showMessageDialog(null, "Este CPF Não Consta No Sistema");
+						//}
+					
+
+				}
+
+				rs.close();
+				stmt.close();
+				con.close();
+
+
+			} 
+
+			catch (SQLException e) 
+				{
+					throw new RuntimeException(e);
+				}
+
+
+
+		}
 	
 	
 	
@@ -382,5 +393,188 @@ public class DAO {
 						}
 					
 				}
+		
+		
+		
+		
+		
+		//CADASTRAR NOVOS MP3's NO BANCO DE DADOS
+		public void adicionaMP3(Mp3 m) {String sql = "insert into mp3 " 
+		//+ contato.getNome() + contato.getEmail() + contato.getEndereco() + " values (?,?,?,?)";
+		+ "(nome,preco,genero,caminho)" + "values (?,?,?,?)"; 
+		
+			try 
+			{
+				//Preparando para a Inserção de Dados
+				Connection con = new ConnectionFactory().getConnection();
+				PreparedStatement stmt = con.prepareStatement(sql);
+				
+						
+				// seta os valores
+				stmt.setString(1,m.getNome());
+				stmt.setString(2,m.getPreco());
+				stmt.setString(3,m.getGenero());
+				stmt.setString(4,m.getCaminho());
+								
+				//Executa no Banco de Dados
+				stmt.execute();
+				//Fecha a Conexão
+				stmt.close();
+				
+				JOptionPane.showMessageDialog(null, "Novo MP3 adicionado com sucesso. Você será redirecionado.");	
+			
+			} 
+				
+			catch (SQLException e) 
+				{
+					throw new RuntimeException(e);
+				}
+			
+		}
+		
+		
+		
+		
+		
+		public void removeMP3(Mp3 m) {
+			
+			
+			try 
+			{
+				//Preparando para a Inserção de Dados
+				Connection con = new ConnectionFactory().getConnection();
+				String sql = "delete from mp3 where STRCMP (nome, '" + m.getNome() + "') = 0;";
+				PreparedStatement ps;
+				
+				java.sql.Statement st = con.createStatement();
+				st.execute(sql);
+				
+				JOptionPane.showMessageDialog(null, "Removido Com Sucesso");
+				
+				con.commit();
+				con.close();
+				
+					
+				
+			} 
+			
+			catch (SQLException e) 
+				{
+					throw new RuntimeException(e);
+				}	
+				
+
+	}
+		
+		
+		
+		
+		//PESQUISA USUÁRIO NO BANCO DE DADOS
+				public void pesquisaMP3(Mp3 m) 
+				{
+
+					try 
+					{
+						//Preparando para a Inserção de Dados
+						Connection con = new ConnectionFactory().getConnection();
+						PreparedStatement stmt = con.prepareStatement("select * from mp3");
+
+						//Executa no Banco de Dados
+						ResultSet rs = stmt.executeQuery();
+
+						//Enquanto...
+						while (rs.next()) 
+						{
+							
+							String cod = rs.getString(1);
+							String nome = rs.getString(2);
+							String preco = rs.getString(3);
+								
+
+								if (m.getNome().equals(rs.getString(2)))
+								{	
+									
+
+									JOptionPane.showMessageDialog(null, "**** MP3 ****\n "   
+											 							 + "\nCódigo: " + cod  
+											 							 + "\nNome: " + nome + ".mp3"
+											 							 + "\nPreço: " + preco
+											 							 );						
+
+								}
+								//SE PASSAR UM USUÁRIO QUE NÃO EXISTE? O QUE FAZER?
+								//else
+								//{	
+								//	JOptionPane.showMessageDialog(null, "Este CPF Não Consta No Sistema");
+								//}
+							
+
+						}
+
+						rs.close();
+						stmt.close();
+						con.close();
+
+
+					} 
+
+					catch (SQLException e) 
+						{
+							throw new RuntimeException(e);
+						}
+
+
+
+				}
+		
+		
+				
+				
+			public boolean insertFile( File f ){
+					
+					
+				    try {
+				    	
+				    	Connection con = new ConnectionFactory().getConnection();
+				        PreparedStatement ps = con.prepareStatement("INSERT INTO arquivo( id, nome, arquivo ) VALUES ( ?, ?, nextval('seq_arquivo') )");
+				 
+				        //converte o objeto file em array de bytes
+				        InputStream is = new FileInputStream( f );
+				        byte[] bytes = new byte[(int)f.length() ];
+				        int offset = 0;
+				        int numRead = 0;
+				       
+				        while (offset < bytes.length && (numRead=is.read(bytes, offset, bytes.length-offset)) >= 0) 
+				        {
+				            offset += numRead;
+				        }
+				 
+				        ps.setString( 1, "Oi" );
+				        ps.setBytes( 2, bytes );
+				        ps.execute();
+				        ps.close();
+				        con.close();
+				        return true;
+				 
+				    }
+				    catch (SQLException ex)
+				    {
+				        ex.printStackTrace();
+				    }
+				    
+				    catch (IOException ex)
+				    {
+				        ex.printStackTrace();
+				    }
+				    
+				    return false;
+				}		
+				
+		
+		
+		
+		
+		
+		
 }
 		

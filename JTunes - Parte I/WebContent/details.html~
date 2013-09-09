@@ -5,12 +5,12 @@
 
 <title>JTunes - Desenvolvimento Web</title>
 
-<link rel="stylesheet" type="text/css" href="style.css" />
+<link rel="../stylesheet" type="text/css" href="../style.css" />
 <!--[if IE 6]>
 <link rel="stylesheet" type="text/css" href="iecss.css" />
 <![endif]-->
 
-<script type="text/javascript" src="js/boxOver.js"></script>
+<script type="text/javascript" src="../js/boxOver.js"></script>
 
 <script>
 
@@ -78,7 +78,7 @@ close();
                          <li class="divider"></li>
                          <li><a href="#" class="nav">Ofertas</a></li>
                          <li class="divider"></li>
-                         <li><a href="#" class="nav">Restrito</a></li>
+                         <li><a href="admin.html" class="nav">Restrito</a></li>
                          <li class="divider"></li>
                          <li><a href="#" class="nav">Navegar</a></li>
                          <li class="divider"></li>                         
@@ -167,7 +167,7 @@ close();
                          
 
                          <a href="details.html" class="prod_buy">Comprar</a>
-                         <a href="#" class="prod_compare">Descartar</a>
+                         <a href="index.html" class="prod_compare">Descartar</a>
                      </div>                        
             </div>
                               
