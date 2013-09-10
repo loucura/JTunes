@@ -20,7 +20,7 @@
 		
 		<init-param>
 			<param-name>PATH</param-name>
-			<param-value>/home/vanderson/git/JTunes - Parte I/JTunes - Parte I/Músicas</param-value>
+			<param-value>/home/vanderson/git/JTunes - Parte I/JTunes - Parte I/</param-value>
 		</init-param>
 		
 		
@@ -145,6 +145,13 @@
         <servlet-name>ServletPagamento</servlet-name>
         <servlet-class>controller.ServletPagamento</servlet-class>
     </servlet>
+    <servlet>
+    	<description>
+    	</description>
+    	<display-name>ServletControlaCompra</display-name>
+    	<servlet-name>ServletControlaCompra</servlet-name>
+    	<servlet-class>controller.ServletControlaCompra</servlet-class>
+    </servlet>
 	
 	
 	
@@ -221,6 +228,10 @@
     <servlet-mapping>
         <servlet-name>ServletPagamento</servlet-name>
         <url-pattern>/ServletPagamento</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+    	<servlet-name>ServletControlaCompra</servlet-name>
+    	<url-pattern>/ServletControlaCompra</url-pattern>
     </servlet-mapping>
 	
 	

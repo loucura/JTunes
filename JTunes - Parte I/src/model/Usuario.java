@@ -14,6 +14,23 @@ import exceptions.UsuarioException;
 
 
 
+
+/**
+ * JTunes - SISTEMA PARA VENDA DE MÚSICAS ONLINE SEMELHANTE AO ITUNES.
+ * SERVLET CONTROLA COMPRA.
+ *
+ * @author VANDERSON DINIZ
+ * @author ERICK SILVA
+ * @version JTUNES 1.0 
+ */
+
+
+/**CLASSE USUÁRIO. RESPONSÁVEL POR IDEALIZAR UM USUÁRIO.
+ * INICIALMENTE, O USUÁRIO NÃO HERDOU DADOS DE UMA CLASSE DE INTERFACE.
+ * PROPOSTA A SER IMPLEMENTADA NA VERSÃO JTUNES 2.0.
+ * */
+
+
 public class Usuario {
 
 	private	Long cod;
@@ -28,12 +45,12 @@ public class Usuario {
 		return this.nome;
 	}
 	
-	public void setNome(String novo) 
+	public void setNome(String novo)  
 	{
 		this.nome = novo;
 	}
-		
-		
+
+	
 	public Long getCod() 
 	{
 		
@@ -67,6 +84,60 @@ public class Usuario {
 	{
 		this.cpf = cpf;
 	}
+	
+	
+	
+	/**EM CONSTRUÇÃO.
+	 * PERMITE VALIDAR OS CAMPOS DE FORMULÁRIO REPASSADOS
+	 * A UM SERVLET. NESTE CASO, SE O CAMPO NOME NÃO FOR PREENCHIDO,
+	 * É FORNECIDA UMA MENSAGEM AO USUÁRIO IMPOSSIBILITANDO-O DE CONTINUAR,
+	 * CASO NÃO PREENCHA O NOME.
+	 * **/
+	public boolean VerificaNome(String name) throws UsuarioException
+	{
+		if (name.equals(""))
+		{
+			return false;
+		}
+	    	    
+	    else
+	    {
+	    	this.nome = name;
+			return true;
+	    		
+	    }
+			
+	}
+	
+	
+	/**EM CONSTRUÇÃO.
+	 * PERMITE VALIDAR OS CAMPOS DE FORMULÁRIO REPASSADOS
+	 * A UM SERVLET. NESTE CASO, SE O CAMPO SENHA NÃO FOR PREENCHIDO,
+	 * É FORNECIDA UMA MENSAGEM AO USUÁRIO IMPOSSIBILITANDO-O DE CONTINUAR,
+	 * CASO NÃO PREENCHA O CAMPO SENHA.
+	 * **/
+	public boolean VerificaSenha(String pass) throws UsuarioException
+	{
+		if (pass.equals(""))
+		{
+			JOptionPane.showMessageDialog(null, "Senha em Branco" );
+			return false;
+		}
+	    	    
+	    else
+	    {
+	    	this.senha = pass;
+			return true;
+	    		
+	    }	
+	
+	}
+	
+	
+	
+	
+	
+	
 	
 	
 	

@@ -4,6 +4,20 @@ package model;
 import java.sql.SQLException;
 
 
+/**
+ * JTunes - SISTEMA PARA VENDA DE MÚSICAS ONLINE SEMELHANTE AO ITUNES.
+ * SERVLET CONTROLA COMPRA.
+ *
+ * @author VANDERSON DINIZ
+ * @author ERICK SILVA
+ * @version JTUNES 1.0 
+ */
+
+
+/**CLASSE QUE MODELA UMA FORMA DE CONTATO E GRAVA OS 
+ * DADOS REPASSADOS PELO FORMULÁRIO HTML NO BANCO DE DADOS.
+ * 
+ * */
 
 
 public class Contato {
@@ -94,6 +108,10 @@ public class Contato {
 	
 		
 	
+	/**@deprecated
+	 * MODELO INICIAL DE CONTATO E UMA FORMA DE TESTAR ANTES DE IMPLEMENTAR 
+	 * EM UM SERVLET. NÃO TEM MAIS IMPORTÂNCIA NO PROJETO. 
+	 * **/
 	public static void main(String[] args) throws SQLException
 	{
 		//Gravar Contatos no Banco de Dados

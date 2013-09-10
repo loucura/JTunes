@@ -21,6 +21,24 @@ import model.Contato;
 import model.DAO;
 
 
+
+/**
+ * JTunes - SISTEMA PARA VENDA DE MÚSICAS ONLINE SEMELHANTE AO ITUNES.
+ * SERVLET CONTROLA COMPRA.
+ *
+ * @author VANDERSON DINIZ
+ * @author ERICK SILVA
+ * @version JTUNES 1.0 
+ */
+
+
+/**SERVLET RESPONSÁVEL POR RECEBER CAMPOS DE UM FORMULÁRIO DE CONTATO EM HTML
+ * E GRAVAR NO BANCO DE DADOS
+ * 
+ * */
+
+
+
 public class ServletContato extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

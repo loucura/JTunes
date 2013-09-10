@@ -17,6 +17,25 @@ import com.mysql.jdbc.Statement;
 
 import exceptions.UsuarioException;
 
+
+
+
+/**
+ * JTunes - SISTEMA PARA VENDA DE MÚSICAS ONLINE SEMELHANTE AO ITUNES.
+ * SERVLET CONTROLA COMPRA.
+ *
+ * @author VANDERSON DINIZ
+ * @author ERICK SILVA
+ * @version JTUNES 1.0 
+ */
+
+
+/**CLASSE QUE IMPLEMENTA OS DIVERSOS MÉTODOS DE INSERÇÃO, REMOÇÃO, PESQUISA, VALIDAÇÃO E ETC,
+ * DAS CLASSES DO PROJETO. CRIA UMA CONEXÃO COM O BANCO DE DADOS E PASSA OS PARÂMETROS 
+ * REQUIRIDOS PELAS TABELAS.
+ * */
+
+
 public class DAO {
 	
 	// a conexão com o banco de dados
@@ -163,7 +182,9 @@ public class DAO {
 		//PESQUISA USUÁRIO NO BANCO DE DADOS
 		public void pesquisaUsuario(Usuario usuario) 
 		{
-
+				
+			
+			
 			try 
 			{
 				//Preparando para a Inserção de Dados
@@ -573,6 +594,53 @@ public class DAO {
 		
 		
 		
+			
+			//REALIZA A COMPRA 
+			public void adicionaCompra(Compra c) {String sql = "insert into pagamento " 
+			//+ contato.getNome() + contato.getEmail() + contato.getEndereco() + " values (?,?,?,?)";
+			+ "(nome,email,endereco,telefone,cidade,quantidade,valor)" + "values (?,?,?,?,?,?,?)"; 
+			
+			
+				try 
+				{
+					//Preparando para a Inserção de Dados
+					Connection con = new ConnectionFactory().getConnection();
+					PreparedStatement stmt = con.prepareStatement(sql);
+					
+							
+					// seta os valores
+					stmt.setString(1,c.getNome());
+					stmt.setString(2,c.getEmail());
+					stmt.setString(3,c.getEndereco());
+					stmt.setString(4,c.getTelefone());
+					stmt.setString(5,c.getCidade());
+					stmt.setLong(6,c.getQuantidade());
+					stmt.setString(7,c.getValor());
+					
+					System.out.println("Dados Gravados com Sucesso!");
+					
+					//Executa no Banco de Dados
+					stmt.execute();
+					//Fecha a Conexão
+					stmt.close();
+					
+				
+				} 
+					
+				catch (SQLException e) 
+					{
+						throw new RuntimeException(e);
+					}
+				
+			}	
+			
+			
+			
+			
+			
+			
+			
+			
 		
 		
 		

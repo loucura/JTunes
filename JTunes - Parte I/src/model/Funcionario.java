@@ -7,6 +7,20 @@ import java.util.Scanner;
 import javax.swing.JOptionPane;
 
 
+/**
+ * JTunes - SISTEMA PARA VENDA DE MÚSICAS ONLINE SEMELHANTE AO ITUNES.
+ * SERVLET CONTROLA COMPRA.
+ *
+ * @author VANDERSON DINIZ
+ * @author ERICK SILVA
+ * @version JTUNES 1.0 
+ */
+
+
+/**CLASSE FUNCIONÁRIO. RESPONSÁVEL POR IDEALIZAR UM FUNCIONÁRIO.
+ * INICIALMENTE, O FUNCIONÁRIO NÃO HERDOU DADOS DE UM CLASSE DE INTERFACE.
+ * PROPOSTA A SER IMPLEMENTADA NA VERSÃO JTUNES 2.0.
+ * */
 
 public class Funcionario {
 
@@ -47,8 +61,12 @@ public class Funcionario {
 	{
 		this.senha = nova_senha;
 	}
-		
 	
+	
+	/**@deprecated
+	 * MODELO INICIAL DE FUNCIONÁRIO E UMA FORMA DE TESTAR ANTES DE IMPLEMENTAR 
+	 * EM UM SERVLET. NÃO TEM MAIS IMPORTÂNCIA NO PROJETO. 
+	 * **/
 	public static void main(String[] args) throws SQLException
 	{
 		

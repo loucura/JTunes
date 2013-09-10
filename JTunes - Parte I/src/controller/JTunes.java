@@ -15,6 +15,24 @@ import model.DAO;
 import model.Funcionario;
 
 
+
+
+/**
+ * JTunes - SISTEMA PARA VENDA DE MÚSICAS ONLINE SEMELHANTE AO ITUNES.
+ * SERVLET CONTROLA COMPRA.
+ *
+ * @author VANDERSON DINIZ
+ * @author ERICK SILVA
+ * @version JTUNES 1.0 
+ */
+
+
+/**SERVLET EM CONSTRUÇÃO
+ * 
+ * */
+
+
+
 public class JTunes extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -26,7 +44,10 @@ public class JTunes extends HttpServlet {
 		
 	}
 
-	
+
+
+	/**EM CONSTRUÇÃO
+	 * */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
 		

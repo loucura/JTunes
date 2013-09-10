@@ -13,24 +13,33 @@ import model.DAO;
 import model.Funcionario;
 import model.Usuario;
 
+
 /**
- * Servlet implementation class ServletAdicionaUsuario
+ * JTunes - SISTEMA PARA VENDA DE MÚSICAS ONLINE SEMELHANTE AO ITUNES.
+ * SERVLET CONTROLA COMPRA.
+ *
+ * @author VANDERSON DINIZ
+ * @author ERICK SILVA
+ * @version JTUNES 1.0 
  */
+
+
+/**SERVLET REMOVE MP3. REALIZA A REMOÇÃO DE ARQUIVOS CADASTRADOS 
+ * NO BANCO DE DADOS POR MEIO DO NOME (ÚNICO) FORNECIDO EM UM CAMPO ESPECÍFICO.
+ * */
+
+
 public class ServletRemoveUsuario extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
    
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
+	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		
@@ -38,7 +47,13 @@ public class ServletRemoveUsuario extends HttpServlet {
 		response.setContentType("text/html"); //Define o tipo dos dados
 		
 		String cpf = request.getParameter( "cpf" ); 
+		
 				
+		/**CRIA UM OBJETO DO TIPO USUÁRIO NA CLASSE SERVLET REMOVE USUÁRIO, SETA O CPF FORNECIDO ATRAVÉS DO FORM
+		 * E REALIZA A BUSCA NO BANCO DE DADOS PELO CPF. AO FINAL, REMOVE E REDIRECIONA PARA A PÁGINA DE CADASTRO,
+		 * PERMITINDO UMA NOVA PESQUISA, INSERÇÃO OU EXCLUSÃO DE UM "NOVO" USUÁRIO MP3.
+		 *  **/
+		
 		Usuario user = new Usuario();
 		user.setCPF(cpf);
 				

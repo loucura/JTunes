@@ -6,23 +6,39 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.*;
 
-  
+ 
+
+/**
+ * JTunes - SISTEMA PARA VENDA DE MÚSICAS ONLINE SEMELHANTE AO ITUNES.
+ * SERVLET CONTROLA COMPRA.
+ *
+ * @author VANDERSON DINIZ
+ * @author ERICK SILVA
+ * @version JTUNES 1.0 
+ */
+
+
+/**CLASSE DE CONEXÃO COM O BANCO DE DADOS
+ * */
+
+
 public class Conexao {  
       
     public Connection getConnection(){  
   
     try{  
   
-        
+    	 /**CAMINHO DO BANCO DE DADOS DO PROJETO LOCAL**/
          String url = "jdbc:mysql://127.0.0.1:3306/jtunes";  
            
     	    	
-        //Conexão Banco Local  
+         /**DRIVER DE CONEXÃO UTILIZADO**/  
          Class.forName("com.mysql.jdbc.Driver");  
                 
-         
+         /**AQUISIÇÃO DE USUÁRIO E SENHA PARA CONEXÃO COM O BANCO DE DADOS**/
          Connection con = DriverManager.getConnection(url,"root","vampirodoidao");  
-                  
+         
+         /**RETORNA O ESTADO DA CONEXÃO**/
          return(con);  
          
          

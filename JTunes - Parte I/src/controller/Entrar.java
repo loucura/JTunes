@@ -25,6 +25,20 @@ import model.DAO;
 import model.Usuario;
 
 
+/**
+ * JTunes - SISTEMA PARA VENDA DE MÚSICAS ONLINE SEMELHANTE AO ITUNES.
+ * SERVLET CONTROLA COMPRA.
+ *
+ * @author VANDERSON DINIZ
+ * @author ERICK SILVA
+ * @version JTUNES 1.0 
+ */
+
+
+/**SERVLET QUE CONTROLA O LOGIN DE USUÁRIOS JUNTO 
+ * AO BANCO DE DADOS.
+ * 
+ * */
 public class Entrar extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -38,6 +52,10 @@ public class Entrar extends HttpServlet {
 	}
 
 	
+	/**RECEBE OS PARÂMETROS DE UM FORMULÁRIO (FORM) HTML E "SETA" OS VALORES PARA O USUÁRIO.
+	 * CRIA UM OBJETO QUE PERMITE CONSULTAR O BANCO DE DADOS E REPASSA O USUÁRIO E SENHA 
+	 * PARA VALIDAR OS DADOS DE LOGIN.
+	 * */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
 	{
 		PrintWriter out = response.getWriter();
