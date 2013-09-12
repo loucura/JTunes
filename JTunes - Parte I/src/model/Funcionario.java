@@ -90,14 +90,21 @@ public class Funcionario {
 		func.setSenha(senha);
 		
 		//Grava a partir dessa Classe
-		DAO bd = new DAO();
+		DAO bd;
+		boolean resposta = false;
+		try {
+			bd = new DAO();
+			resposta = bd.pesquisaFuncionario(func);
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		//Chama a Classe DAO para a inserção dos dados no BD
 		//bd.adicionaUsuario(user);
 		
 		//PESQUISA USUÁRIO NO BANCO DE DADOS
 		//bd.pesquisaUsuario(user);		
 		
-		boolean resposta = bd.pesquisaFuncionario(func);  
 		  
 		if (resposta == true)
 		{  

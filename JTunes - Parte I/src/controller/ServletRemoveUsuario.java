@@ -57,8 +57,15 @@ public class ServletRemoveUsuario extends HttpServlet {
 		Usuario user = new Usuario();
 		user.setCPF(cpf);
 				
-		DAO dao = new DAO();
-		dao.removeUsuario(user);	
+		DAO dao;
+		try {
+			dao = new DAO();
+			dao.removeUsuario(user);	
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		
 		
 		//ESTÁ REMOVENDO O USUÁRIO PELO CPF, MAS NÃO REDIRECIONA A PÁGINA

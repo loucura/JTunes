@@ -86,7 +86,7 @@ close();
                      <div class="details_big_box">
                                                  
                             
-                          <form action="ServletAdicionarMP3" method="post" name="adicionarproduto">     
+                          <form action="ServletUploadArquivo" method="post" name="adicionarproduto" enctype="multipart/form-data">     
                             <div class="form_row">
                    				 <label class="contact"><strong>Nome:</strong></label>
                     				 <input type="text" class="contact_input" name="nome" size="20"/>
@@ -95,14 +95,14 @@ close();
                    			 
                    			 <div class="form_row">
                    				 <label class="contact"><strong>Preço:</strong></label>
-                    				 <input type="text" class="contact_input" name="preco" size="10" value="R$ " />
+                    				 <input type="text" class="contact_input" name="valor" size="10" value="R$ " />
                    			 </div>
                    			 
                    			 
                    			  <div class="form_row">
                    				 <label class="contact"><strong>Gênero:</strong></label>
                    			 
-                   			 <select name="generomusical">
+                   			 <select name="genero">
 		
 										<option value="rock" selected="true">Rock</option>
 										<option value="samba">Samba</option>
@@ -112,6 +112,11 @@ close();
 												
 									</select>
                    			 
+                   			  </div>
+                   			  
+                   			  <div class="form_row">
+                   			  <label class="contact"><strong>Arquivo:</strong></label>
+                   			  <input type="file" name="arquivo" /><br />
                    			  </div>
                    			 
                    			 

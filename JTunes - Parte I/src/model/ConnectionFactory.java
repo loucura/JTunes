@@ -29,20 +29,26 @@ public class ConnectionFactory {
 	public Connection getConnection() {
 		
 	try {
-		
-			return DriverManager.getConnection("jdbc:mysql://localhost/jtunes", "root", "vampirodoidao");
+			Class.forName("com.mysql.jdbc.Driver");
+			
 			
 		}
 		
-		catch (SQLException e) 
-		{
-			throw new RuntimeException(e);
-	
+		catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 
+	try {
+		return DriverManager.getConnection("jdbc:mysql://localhost/jtunes", "root", "vampirodoidao");
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	return null;
 	}
 	
-	public static void Main (String[]args) throws SQLException
+	public static void Main (String[]args) throws SQLException, ClassNotFoundException
 	{
 		Connection connection = new ConnectionFactory().getConnection();
 		System.out.println("Conexão bem-sucedida!");

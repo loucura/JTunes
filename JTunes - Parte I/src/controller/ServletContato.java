@@ -77,8 +77,15 @@ public class ServletContato extends HttpServlet {
 				contato.setMensagem(mensagem);
 				
 				//CHAMA A CLASSE DE CONEXÃO DAO
-				DAO dao = new DAO();
-				dao.adicionaContato(contato);
+				DAO dao;
+				try {
+					dao = new DAO();
+					dao.adicionaContato(contato);
+				} catch (ClassNotFoundException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
 
 				response.sendRedirect( "contact.html" );
 	
@@ -89,7 +96,7 @@ public class ServletContato extends HttpServlet {
 	
 	
 	
-		public void PesquisaContato(Contato contato)
+		public void PesquisaContato(Contato contato) throws ClassNotFoundException
 		{
 				Contato con = new Contato();
 				
@@ -103,7 +110,7 @@ public class ServletContato extends HttpServlet {
 		
 		}
 	
-		public void ExcluiContato(Contato contato)
+		public void ExcluiContato(Contato contato) throws ClassNotFoundException
 		{
 				Contato con = new Contato();
 				

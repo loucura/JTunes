@@ -67,8 +67,16 @@ public class ServletPesquisaUsuario extends HttpServlet {
 		user.setCPF(cpf);
 		
 				
-		DAO bd = new DAO();
-		bd.pesquisaUsuario(user);	
+		DAO bd;
+		try {
+			bd = new DAO();
+			bd.pesquisaUsuario(user);	
+		} catch (ClassNotFoundException e) {
+			
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		
 		response.sendRedirect("pesquisar_usuario.html");
 		

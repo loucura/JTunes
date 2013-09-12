@@ -13,12 +13,12 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.swing.JOptionPane;
+
 
 import model.ConnectionFactory;
 import model.DAO;
@@ -65,10 +65,19 @@ public class ServletFuncionario extends HttpServlet {
 		func.setNome(nome);
 		func.setSenha(pass);
 		
-		DAO bd = new DAO();
-		bd.pesquisaFuncionario(func);	
+		boolean resposta = false;
+		DAO bd;
+		try {
+			bd = new DAO();
+			bd.pesquisaFuncionario(func);	
+			resposta = bd.pesquisaFuncionario(func);  
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
-		boolean resposta = bd.pesquisaFuncionario(func);  
+		
+		
 		  
 		if (resposta == true)
 		{  

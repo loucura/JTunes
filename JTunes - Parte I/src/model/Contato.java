@@ -108,11 +108,12 @@ public class Contato {
 	
 		
 	
-	/**@deprecated
+	/**@throws ClassNotFoundException 
+	 * @deprecated
 	 * MODELO INICIAL DE CONTATO E UMA FORMA DE TESTAR ANTES DE IMPLEMENTAR 
 	 * EM UM SERVLET. NÃO TEM MAIS IMPORTÂNCIA NO PROJETO. 
 	 * **/
-	public static void main(String[] args) throws SQLException
+	public static void main(String[] args) throws SQLException, ClassNotFoundException
 	{
 		//Gravar Contatos no Banco de Dados
 		Contato contato = new Contato();

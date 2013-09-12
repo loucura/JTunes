@@ -58,8 +58,15 @@ public class JTunes extends HttpServlet {
 		
 		File file = new File(arquivo);
 	   	
-	    DAO dao = new DAO();
-		dao.insertFile(file);
+	    DAO dao;
+		try {
+			dao = new DAO();
+			dao.insertFile(file);
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		
 		
 		

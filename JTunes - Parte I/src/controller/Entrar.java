@@ -68,11 +68,20 @@ public class Entrar extends HttpServlet {
 		user.setNome(nome);
 		user.setSenha(pass);
 		
-		DAO bd = new DAO();
-		bd.Login(user);	
+		DAO bd;
+		boolean resposta = false;
+		try {
+			bd = new DAO();
+			bd.Login(user);	
+			resposta = bd.Login(user); 
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		
-		boolean resposta = bd.Login(user);  
+		
+		 
 		  
 		if (resposta == true)
 		{  

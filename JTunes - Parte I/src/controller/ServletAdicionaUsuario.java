@@ -11,7 +11,6 @@ import javax.swing.JOptionPane;
 import javax.xml.ws.Response;
 
 import sun.swing.BakedArrayList;
-import exceptions.UsuarioException;
 import model.DAO;
 import model.Funcionario;
 import model.Usuario;
@@ -66,8 +65,6 @@ public class ServletAdicionaUsuario extends HttpServlet {
 			
 		
 		
-		try
-		{
 		
 			boolean resposta = user.VerificaNome(nome);  
 			
@@ -85,11 +82,6 @@ public class ServletAdicionaUsuario extends HttpServlet {
 			}
 			
 			
-		}
-		catch (UsuarioException e)
-		{
-			JOptionPane.showMessageDialog(null, e.getMessage());
-		}
 		
 		user.setNome(nome);
 		user.setSenha(pass);

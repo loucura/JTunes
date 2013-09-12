@@ -15,7 +15,7 @@ import javax.swing.JOptionPane;
 
 import com.mysql.jdbc.Statement;
 
-import exceptions.UsuarioException;
+//import exceptions.UsuarioException;
 
 
 
@@ -42,14 +42,14 @@ public class DAO {
 	private Connection connection;
 	
 	
-	public DAO() 
+	public DAO() throws ClassNotFoundException 
 	{
 		this.connection = new ConnectionFactory().getConnection();
 	
 	}
 	
 	//ADICIONA CONTATO NO BANCO DE DADOS
-	public void adicionaContato(Contato contato) {String sql = "insert into Contatos " 
+	public void adicionaContato(Contato contato) throws ClassNotFoundException {String sql = "insert into Contatos " 
 	//+ contato.getNome() + contato.getEmail() + contato.getEndereco() + " values (?,?,?,?)";
 	+ "(nome,email,endereco,telefone,empresa,mensagem)" + "values (?,?,?,?,?,?)"; 
 	
@@ -87,7 +87,7 @@ public class DAO {
 	}
 
 	//PESQUISA CONTATO NO BANCO DE DADOS
-	public void pesquisaContato(Contato contato) 
+	public void pesquisaContato(Contato contato) throws ClassNotFoundException 
 	{
 				try 
 				{
@@ -444,6 +444,7 @@ public class DAO {
 				
 				JOptionPane.showMessageDialog(null, "Novo MP3 adicionado com sucesso. Você será redirecionado.");	
 			
+				
 			} 
 				
 			catch (SQLException e) 
