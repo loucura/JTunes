@@ -27,15 +27,6 @@
 		
 		
 	</servlet>
-	
-	<servlet>
-		<description>
-		</description>
-		<display-name>ServletUploadArquivo</display-name>
-		<servlet-name>ServletUploadArquivo</servlet-name>
-		<servlet-class>controller.ServletUploadArquivo</servlet-class>
-	</servlet>
-	
 	<servlet>
 		<description>
 		</description>
@@ -161,6 +152,13 @@
     	<servlet-name>ServletControlaCompra</servlet-name>
     	<servlet-class>controller.ServletControlaCompra</servlet-class>
     </servlet>
+    <servlet>
+    	<description>
+    	</description>
+    	<display-name>ServletUploadArquivo</display-name>
+    	<servlet-name>ServletUploadArquivo</servlet-name>
+    	<servlet-class>controller.ServletUploadArquivo</servlet-class>
+    </servlet>
 	
 	
 	
@@ -242,12 +240,10 @@
     	<servlet-name>ServletControlaCompra</servlet-name>
     	<url-pattern>/ServletControlaCompra</url-pattern>
     </servlet-mapping>
-    
     <servlet-mapping>
     	<servlet-name>ServletUploadArquivo</servlet-name>
     	<url-pattern>/ServletUploadArquivo</url-pattern>
     </servlet-mapping>
-    
 	
 	
 	<error-page>

@@ -11,6 +11,7 @@ import javax.swing.JOptionPane;
 import javax.xml.ws.Response;
 
 import sun.swing.BakedArrayList;
+import exceptions.UsuarioException;
 import model.DAO;
 import model.Funcionario;
 import model.Usuario;
@@ -62,30 +63,48 @@ public class ServletAdicionaUsuario extends HttpServlet {
 		String nome = request.getParameter( "nome" );
 		String pass = request.getParameter( "senha" ); 
 		String cpf = request.getParameter("cpf");	
-			
 		
-		
-		
-			boolean resposta = user.VerificaNome(nome);  
-			
-			if (resposta == true)
-			{  
-			 JOptionPane.showMessageDialog(null, "Prossiga");  
-			// response.sendRedirect("index.html");
-			  
-			}
-			else
-			{  
-			 JOptionPane.showMessageDialog(null, "Nome em Branco"); 
-			 response.sendRedirect("novo_usuario.html");
-			 
-			}
-			
-			
+//		
+//		try
+//		{
+//		
+//			boolean resposta = user.VerificaNome(nome);  
+//			
+//			if (resposta == true)
+//			{  
+//			 JOptionPane.showMessageDialog(null, "Prossiga");  
+//			// response.sendRedirect("index.html");
+//			  
+//			}
+//			else
+//			{  
+//			 JOptionPane.showMessageDialog(null, "Nome em Branco"); 
+//			 response.sendRedirect("novo_usuario.html");
+//			 
+//			}
+//			
+//			
+//		}
+//		catch (UsuarioException e)
+//		{
+//			JOptionPane.showMessageDialog(null, e.getMessage());
+//		}
 		
 		user.setNome(nome);
 		user.setSenha(pass);
 		user.setCPF(cpf);
+		
+		DAO bd;
+		try {
+			bd = new DAO();
+			bd.adicionaUsuario(user);
+			JOptionPane.showMessageDialog(null, "Cadastrado com Sucesso");
+			response.sendRedirect("cadastrar.html");
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		
 
 

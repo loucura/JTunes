@@ -70,14 +70,17 @@ public class Entrar extends HttpServlet {
 		
 		DAO bd;
 		boolean resposta = false;
-		try {
-			bd = new DAO();
-			bd.Login(user);	
-			resposta = bd.Login(user); 
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
+			try {
+				bd = new DAO();
+				bd.Login(user);	
+				resposta = bd.Login(user); 
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		
 		
 		
 		

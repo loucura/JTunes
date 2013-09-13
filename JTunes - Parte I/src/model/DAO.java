@@ -420,7 +420,7 @@ public class DAO {
 		
 		
 		//CADASTRAR NOVOS MP3's NO BANCO DE DADOS
-		public void adicionaMP3(Mp3 m) {String sql = "insert into mp3 " 
+		public void adicionaMP3(Mp3 m) {String sql = "insert into mp3" 
 		//+ contato.getNome() + contato.getEmail() + contato.getEndereco() + " values (?,?,?,?)";
 		+ "(nome,preco,genero,caminho)" + "values (?,?,?,?)"; 
 		
@@ -436,6 +436,7 @@ public class DAO {
 				stmt.setString(2,m.getPreco());
 				stmt.setString(3,m.getGenero());
 				stmt.setString(4,m.getCaminho());
+				
 								
 				//Executa no Banco de Dados
 				stmt.execute();

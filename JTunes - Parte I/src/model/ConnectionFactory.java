@@ -30,21 +30,19 @@ public class ConnectionFactory {
 		
 	try {
 			Class.forName("com.mysql.jdbc.Driver");
+			return DriverManager.getConnection("jdbc:mysql://localhost/jtunes", "root", "vampirodoidao");
 			
 			
 		}
 		
-		catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
+		catch (ClassNotFoundException e1) {
+			e1.printStackTrace();
+		}
+		
+		catch(SQLException e) {
 			e.printStackTrace();
 		}
 
-	try {
-		return DriverManager.getConnection("jdbc:mysql://localhost/jtunes", "root", "vampirodoidao");
-	} catch (SQLException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
 	return null;
 	}
 	

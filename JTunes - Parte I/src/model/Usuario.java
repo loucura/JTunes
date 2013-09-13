@@ -10,6 +10,7 @@ import javax.swing.JOptionPane;
 import com.sun.xml.internal.ws.api.pipe.NextAction;
 
 import controller.ServletAdicionaUsuario;
+import exceptions.UsuarioException;
 
 
 
@@ -92,7 +93,7 @@ public class Usuario {
 	 * É FORNECIDA UMA MENSAGEM AO USUÁRIO IMPOSSIBILITANDO-O DE CONTINUAR,
 	 * CASO NÃO PREENCHA O NOME.
 	 * **/
-	public boolean VerificaNome(String name) 
+	public boolean VerificaNome(String name) throws UsuarioException
 	{
 		if (name.equals(""))
 		{
@@ -115,7 +116,7 @@ public class Usuario {
 	 * É FORNECIDA UMA MENSAGEM AO USUÁRIO IMPOSSIBILITANDO-O DE CONTINUAR,
 	 * CASO NÃO PREENCHA O CAMPO SENHA.
 	 * **/
-	public boolean VerificaSenha(String pass) 
+	public boolean VerificaSenha(String pass) throws UsuarioException
 	{
 		if (pass.equals(""))
 		{

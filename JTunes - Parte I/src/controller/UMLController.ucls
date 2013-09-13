@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.1.3" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true">  
+  <class id="1" language="java" name="controller.Entrar" project="JTunes - Parte I" 
+    file="/JTunes - Parte I/src/controller/Entrar.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="163" width="159" x="13" y="11"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="controller.ServletAdicionarMP3" project="JTunes - Parte I" 
+    file="/JTunes - Parte I/src/controller/ServletAdicionarMP3.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="148" width="144" x="182" y="13"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="controller.ServletAdicionaUsuario" project="JTunes - Parte I" 
+    file="/JTunes - Parte I/src/controller/ServletAdicionaUsuario.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="223" width="165" x="558" y="14"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="controller.ServletContato" project="JTunes - Parte I" 
+    file="/JTunes - Parte I/src/controller/ServletContato.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="182" width="160" x="188" y="191"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="controller.ServletControlaCompra" project="JTunes - Parte I" 
+    file="/JTunes - Parte I/src/controller/ServletControlaCompra.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="229" width="158" x="368" y="14"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="controller.ServletFuncionario" project="JTunes - Parte I" 
+    file="/JTunes - Parte I/src/controller/ServletFuncionario.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="215" width="166" x="1069" y="28"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="controller.ServletPagamento" project="JTunes - Parte I" 
+    file="/JTunes - Parte I/src/controller/ServletPagamento.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="206" width="130" x="915" y="33"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="controller.ServletPesquisarMP3" project="JTunes - Parte I" 
+    file="/JTunes - Parte I/src/controller/ServletPesquisarMP3.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="144" width="164" x="11" y="193"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="controller.ServletPesquisaUsuario" project="JTunes - Parte I" 
+    file="/JTunes - Parte I/src/controller/ServletPesquisaUsuario.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="143" width="170" x="365" y="293"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="controller.ServletRemoveMP3" project="JTunes - Parte I" 
+    file="/JTunes - Parte I/src/controller/ServletRemoveMP3.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="160" width="185" x="552" y="253"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="controller.ServletRemoveUsuario" project="JTunes - Parte I" 
+    file="/JTunes - Parte I/src/controller/ServletRemoveUsuario.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="245" width="156" x="747" y="15"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>
