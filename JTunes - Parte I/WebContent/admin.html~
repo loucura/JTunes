@@ -62,8 +62,7 @@
                          <li class="divider"></li>
                          <li><a href="#" class="nav">Músicas</a></li>
                          <li class="divider"></li>
-                         <li><a href="#" class="nav">Ofertas</a></li>
-                         <li class="divider"></li>
+                       
                          <li><a href="#" class="nav">Restrito</a></li>
                          <li class="divider"></li>
                          <li><a href="#" class="nav">Navegar</a></li>
@@ -81,6 +80,7 @@
     
     </div>        
     
+   <!--	
    <div class="left_content">
     <div class="title_box">Categorias</div>
     
@@ -117,7 +117,9 @@
      </div>    
         
     
-   </div><!-- end of left content --> 
+   </div>
+-->
+<!-- end of left content --> 
 
 
 
@@ -163,7 +165,7 @@
 
 
 
-
+<!--
  <div class="right_content">
  
       <div class="title_box">Procurar</div>  
@@ -213,7 +215,9 @@
      <a href="#"><img src="images/18.jpg" alt="" title="" border="0" /></a>
      </div>        
      
-   </div><!-- end of right content -->   
+   </div>
+-->   
+<!-- end of right content -->   
 
 
             

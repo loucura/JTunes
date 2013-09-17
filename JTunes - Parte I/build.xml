@@ -1,0 +1,60 @@
+
+<project name="JTunes" default="compilar">
+	
+	<!-- VALOR DEFAULT = ant compilar.-->
+	
+
+	<!-- PREPARA A ESTRUTURA DE DIRETÓRIOS
+		 ant init
+	-->
+	<target name="init">
+	   <mkdir dir="${build}"/>
+	  </target>
+	
+	
+	<!-- COMPILA O PROGRAMA 
+		 ant OU ant compilar /
+	-->
+	<target name="compilar" depends="init">
+	   <javac srcdir="src" classpath="/opt/apache-tomcat-5.5.36/common/lib/itext-xtra-5.4.3.jar:WebContent/WEB-INF/lib/itext-pdfa-5.4.3-sources.jar:WebContent/WEB-INF/lib/itext-xtra-5.4.3-javadoc.jar:WebContent/WEB-INF/lib/itext-pdfa-5.4.3.jar:/opt/apache-tomcat-5.5.36/common/lib/ecj-3.7.2.jar:/home/vanderson/Downloads/itext-5.4.3.zip:/opt/apache-tomcat-5.5.36/common/lib/naming-factory-dbcp.jar:/opt/apache-tomcat-5.5.36/common/lib/itextpdf-5.4.3.jar:/opt/apache-tomcat-5.5.36/common/lib/commons-io-2.4-bin.zip:/opt/apache-tomcat-5.5.36/common/lib/jasper-runtime.jar:/opt/apache-tomcat-5.5.36/common/lib/commons-el.jar:WebContent/WEB-INF/lib/itextpdf-5.4.3.jar:WebContent/WEB-INF/lib/itextpdf-5.4.3-javadoc.jar:WebContent/WEB-INF/lib/commons-fileupload-1.3-sources.jar:WebContent/WEB-INF/lib/itext-xtra-5.4.3-sources.jar:/opt/apache-tomcat-5.5.36/common/lib/commons-fileupload-1.3-javadoc.jar:WebContent/WEB-INF/lib/itext-pdfa-5.4.3-javadoc.jar:/opt/apache-tomcat-5.5.36/common/lib/naming-factory.jar:WebContent/WEB-INF/lib/mysql-connector-java-5.1.26-bin.jar:/opt/apache-tomcat-5.5.36/common/lib/itext-xtra-5.4.3-javadoc.jar:WebContent/WEB-INF/lib/commons-fileupload-1.3-test-sources.jar:/opt/apache-tomcat-5.5.36/common/lib/naming-resources.jar:WebContent/WEB-INF/lib/itextpdf-5.4.3-sources.jar:/opt/apache-tomcat-5.5.36/common/lib/itext-pdfa-5.4.3-sources.jar:/opt/apache-tomcat-5.5.36/common/lib/itextpdf-5.4.3-javadoc.jar:WebContent/WEB-INF/lib/commons-fileupload-1.3.jar:/opt/apache-tomcat-5.5.36/common/lib/itext-pdfa-5.4.3.jar:/opt/apache-tomcat-5.5.36/common/lib/commons-fileupload-1.3.jar:/opt/apache-tomcat-5.5.36/common/lib/commons-fileupload-1.3-sources.jar:/opt/apache-tomcat-5.5.36/common/lib/jsp-api.jar:/opt/apache-tomcat-5.5.36/common/lib/jasper-compiler.jar:WebContent/WEB-INF/lib/itext-xtra-5.4.3.jar:/opt/apache-tomcat-5.5.36/common/lib/itextpdf-5.4.3-sources.jar:WebContent/WEB-INF/lib/commons-io-2.4-bin.zip:/opt/apache-tomcat-5.5.36/common/lib/itext-xtra-5.4.3-sources.jar:WebContent/WEB-INF/lib/commons-fileupload-1.3-javadoc.jar:/opt/apache-tomcat-5.5.36/common/lib/servlet-api.jar:/opt/apache-tomcat-5.5.36/common/lib/commons-fileupload-1.3-test-sources.jar:/opt/apache-tomcat-5.5.36/common/lib/commons-fileupload-1.3-tests.jar:WebContent/WEB-INF/lib/commons-fileupload-1.3-tests.jar:/opt/apache-tomcat-5.5.36/common/lib/itext-pdfa-5.4.3-javadoc.jar:/opt/apache-tomcat-5.5.36/common/lib/mysql-connector-java-5.1.26-bin.jar" destdir="${build}" source="1.7" sourcepath="src" />
+	 </target>
+	
+	
+		
+	<!--LIMPA A ÁRVORE DO PROJETO DE TUDO QUE SEJA DESNECERRÁRIO, INCLUINDO ARQUIVOS .CLASS, ETC... -->
+	<target name="limpar">
+		 <delete dir="${build}" />	
+	</target>
+	
+	
+	
+	<!-- GERA O JAVADOC DE TODO O PROJETO -->
+	<target name="javadoc">
+	        <javadoc access="public" author="true" classpath="/opt/apache-tomcat-5.5.36/common/lib/itext-xtra-5.4.3.jar:WebContent/WEB-INF/lib/itext-pdfa-5.4.3-sources.jar:WebContent/WEB-INF/lib/itext-xtra-5.4.3-javadoc.jar:WebContent/WEB-INF/lib/itext-pdfa-5.4.3.jar:/opt/apache-tomcat-5.5.36/common/lib/ecj-3.7.2.jar:/home/vanderson/Downloads/itext-5.4.3.zip:/opt/apache-tomcat-5.5.36/common/lib/naming-factory-dbcp.jar:/opt/apache-tomcat-5.5.36/common/lib/itextpdf-5.4.3.jar:/opt/apache-tomcat-5.5.36/common/lib/commons-io-2.4-bin.zip:/opt/apache-tomcat-5.5.36/common/lib/jasper-runtime.jar:/opt/apache-tomcat-5.5.36/common/lib/commons-el.jar:WebContent/WEB-INF/lib/itextpdf-5.4.3.jar:WebContent/WEB-INF/lib/itextpdf-5.4.3-javadoc.jar:WebContent/WEB-INF/lib/commons-fileupload-1.3-sources.jar:WebContent/WEB-INF/lib/itext-xtra-5.4.3-sources.jar:/opt/apache-tomcat-5.5.36/common/lib/commons-fileupload-1.3-javadoc.jar:WebContent/WEB-INF/lib/itext-pdfa-5.4.3-javadoc.jar:/opt/apache-tomcat-5.5.36/common/lib/naming-factory.jar:WebContent/WEB-INF/lib/mysql-connector-java-5.1.26-bin.jar:/opt/apache-tomcat-5.5.36/common/lib/itext-xtra-5.4.3-javadoc.jar:WebContent/WEB-INF/lib/commons-fileupload-1.3-test-sources.jar:/opt/apache-tomcat-5.5.36/common/lib/naming-resources.jar:WebContent/WEB-INF/lib/itextpdf-5.4.3-sources.jar:/opt/apache-tomcat-5.5.36/common/lib/itext-pdfa-5.4.3-sources.jar:/opt/apache-tomcat-5.5.36/common/lib/itextpdf-5.4.3-javadoc.jar:WebContent/WEB-INF/lib/commons-fileupload-1.3.jar:/opt/apache-tomcat-5.5.36/common/lib/itext-pdfa-5.4.3.jar:/opt/apache-tomcat-5.5.36/common/lib/commons-fileupload-1.3.jar:/opt/apache-tomcat-5.5.36/common/lib/commons-fileupload-1.3-sources.jar:/opt/apache-tomcat-5.5.36/common/lib/jsp-api.jar:/opt/apache-tomcat-5.5.36/common/lib/jasper-compiler.jar:WebContent/WEB-INF/lib/itext-xtra-5.4.3.jar:/opt/apache-tomcat-5.5.36/common/lib/itextpdf-5.4.3-sources.jar:WebContent/WEB-INF/lib/commons-io-2.4-bin.zip:/opt/apache-tomcat-5.5.36/common/lib/itext-xtra-5.4.3-sources.jar:WebContent/WEB-INF/lib/commons-fileupload-1.3-javadoc.jar:/opt/apache-tomcat-5.5.36/common/lib/servlet-api.jar:/opt/apache-tomcat-5.5.36/common/lib/commons-fileupload-1.3-test-sources.jar:/opt/apache-tomcat-5.5.36/common/lib/commons-fileupload-1.3-tests.jar:WebContent/WEB-INF/lib/commons-fileupload-1.3-tests.jar:/opt/apache-tomcat-5.5.36/common/lib/itext-pdfa-5.4.3-javadoc.jar:/opt/apache-tomcat-5.5.36/common/lib/mysql-connector-java-5.1.26-bin.jar" destdir="doc" doctitle="JTunes - Versão 1.0. Desenvolvimento Web JavaEE. Vanderson Diniz/Erick Silva" nodeprecated="false" nodeprecatedlist="false" noindex="false" nonavbar="false" notree="false" packagenames="controller,model,exceptions" source="1.7" sourcepath="src" splitindex="true" use="true" version="true"/>
+	    </target>
+
+	
+	
+	<!-- GERA O ARQUIVO .WAR-->
+	 <target name="gerawar" depends="compilar">
+	       	 
+	        <war warfile="JTunes_-_Parte_I.war" webxml="WebContent/WEB-INF/web.xml">
+	            
+	        	 
+	        </war>
+	 
+	    </target>
+	
+	
+	
+	<!--"ENVIA" PARA O TOMCAT -->
+	<target name="deploy">
+		<echo>ENVIANDO ARQUIVO JTunes_-_Parte_I.war PARA O TOMCAT7 EM </echo>
+		<echo>/opt/tomcat7/webapps/</echo>
+		 <copy file="JTunes_-_Parte_I.war" todir="/opt/tomcat7/webapps/" />
+	</target>
+	
+	
+	
+	
+</project>

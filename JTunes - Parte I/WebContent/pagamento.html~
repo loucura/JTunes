@@ -114,7 +114,7 @@
                     <input type="email" class="contact_input" name="email"/>
                     </div>
 					
-					<div class="form_row">
+		    		<div class="form_row">
                     <label class="contact"><strong>Endereço de Entrega:</strong></label>
                     <input type="text" class="contact_input" name="endereco" />
                     </div>
@@ -125,15 +125,18 @@
                     </div>
                     
 
-		    <div class="form_row">
+		  			<div class="form_row">
                     <label class="contact"><strong>Cidade</strong></label>
                     <input type="text" class="contact_input" name="cidade" />
                     </div>	
                              	      
 
                     <div class="form_row">
-                   	<input value="Enviar" type="submit" onclick="return validar()" />	<input type="reset" />
-		    </div>      
+                   		<input value="Enviar" type="submit" onclick="return validar()" />	<input type="reset" />
+		   			 </div>   
+		   			 
+		   			 
+		   			    
  
                 </form>
 

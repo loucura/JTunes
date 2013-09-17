@@ -80,7 +80,7 @@ public class ServletUploadArquivo extends HttpServlet {
                         
                     } else {
                         //caso seja um campo do tipo file
-                        File uploadedFile = new File("/home/vanderson/Downloads/" + item.getName());
+                        File uploadedFile = new File("/home/vanderson/git/JTunes - Parte I/JTunes - Parte I/Músicas/UPLOAD/" + item.getName());
                         musica.setCaminho(uploadedFile.getAbsolutePath());
                         item.write(uploadedFile);
                     }

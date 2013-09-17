@@ -1,16 +1,6 @@
 package model;
 
 
-import java.sql.SQLException;
-import java.util.Scanner;
-
-import javax.swing.JOptionPane;
-
-import com.sun.xml.internal.ws.api.pipe.NextAction;
-
-
-
-
 /**
  * JTunes - SISTEMA PARA VENDA DE MÚSICAS ONLINE SEMELHANTE AO ITUNES.
  * SERVLET CONTROLA COMPRA.

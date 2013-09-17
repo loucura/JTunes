@@ -64,7 +64,7 @@
                          <li class="divider"></li>
                          <li><a href="#" class="nav">Ofertas</a></li>
                          <li class="divider"></li>
-                         <li><a href="#" class="nav">Restrito</a></li>
+                         <li><a href="admin.html" class="nav">Restrito</a></li>
                          <li class="divider"></li>
                          <li><a href="#" class="nav">Navegar</a></li>
                          <li class="divider"></li>                         
@@ -81,6 +81,8 @@
     
     </div>        
     
+
+<!--
    <div class="left_content">
     <div class="title_box">Categorias</div>
     
@@ -117,7 +119,9 @@
      </div>    
         
     
-   </div><!-- end of left content --> 
+   </div>
+	-->
+<!-- end of left content --> 
 
 
 
@@ -161,7 +165,7 @@
 
 
 
-
+<!--
 
  <div class="right_content">
  
@@ -212,11 +216,15 @@
      <a href="#"><img src="images/18.jpg" alt="" title="" border="0" /></a>
      </div>        
      
-   </div><!-- end of right content -->   
+   </div>
+-->
+<!-- end of right content -->   
 
 
             
-   </div><!-- end of main content -->
+   </div>
+	
+<!-- end of main content -->
    
    
    

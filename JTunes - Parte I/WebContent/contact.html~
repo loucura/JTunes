@@ -60,19 +60,8 @@
    
             <div id="menu_tab">
                     <ul class="menu">
-                         <li><a href="index.html" class="nav">  Home </a></li>
-                         <li class="divider"></li>
-                         <li><a href="#" class="nav">Músicas</a></li>
-                         <li class="divider"></li>
-                         <li><a href="#" class="nav">Ofertas</a></li>
-                         <li class="divider"></li>
-                         <li><a href="admin.html" class="nav">Restrito</a></li>
-                         <li class="divider"></li>
-                         <li><a href="#" class="nav">Navegar</a></li>
-                         <li class="divider"></li>                         
-                         <li><a href="login.html" class="nav">Login </a></li>
-                         <li class="divider"></li>
-                         <li><a href="contact.html" class="nav">Contato</a></li>
+                         <li><a href="index_preview.html" class="nav">  Home </a></li>
+                         
 
                     </ul>
 
@@ -83,6 +72,7 @@
     
     </div>        
     
+   <!--	
    <div class="left_content">
     <div class="title_box">Categorias</div>
     
@@ -119,7 +109,9 @@
      </div>    
         
     
-   </div><!-- end of left content --> 
+   </div>
+-->
+<!-- end of left content --> 
 
 
 
@@ -147,7 +139,7 @@
 
                     <div class="form_row">
                     <label class="contact"><strong>Email:</strong></label>
-                    <input type="text" class="contact_input" name="email"/>
+                    <input type="email" class="contact_input" name="email"/>
                     </div>
 					
 					<div class="form_row">
@@ -172,8 +164,8 @@
 
                     
                     <div class="form_row">
-                   <input value="Enviar" type="submit" onclick="return validar()" />	<input type="reset" />
-					</div>      
+                   		<input value="Enviar" type="submit" onclick="return validar()" />	<input type="reset" />
+							</div>      
  
                 </form>
 

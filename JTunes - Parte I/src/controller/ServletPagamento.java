@@ -69,6 +69,9 @@ public class ServletPagamento extends HttpServlet {
 		String telefone = request.getParameter("telefone");
 		String cidade = request.getParameter("cidade");
 		
+		
+		
+		
 		/**VALOR, SERÁ O VALOR TOTAL DA COMPRA REALIZADA**/
 		String valor = request.getParameter("valor");
 		
@@ -79,8 +82,8 @@ public class ServletPagamento extends HttpServlet {
 		c.setEndereco(endereco);
 		c.setTelefone(telefone);
 		c.setCidade(cidade);
-		c.setQuantidade(1);
-		c.setValor("abc");
+		c.setQuantidade(4);
+		c.setValor("R$ 2.00");
 		
 		/**CRIA UM OBJETO DE CONEXÃO COM O BANCO DE DADOS E REPASSA OS PARÂMETROS ANTERIORES PARA GRAVAR NO BANCO**/
 		DAO dao;

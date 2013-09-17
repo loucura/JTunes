@@ -1,7 +1,5 @@
 package exceptions;
 
-import controller.ServletAdicionaUsuario;
-
 
 /**
  * JTunes - SISTEMA PARA VENDA DE MÚSICAS ONLINE SEMELHANTE AO ITUNES.

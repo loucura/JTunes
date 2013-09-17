@@ -1,15 +1,8 @@
 package model;
 
-
-import java.sql.SQLException;
-import java.util.Scanner;
-
-import javax.servlet.RequestDispatcher;
 import javax.swing.JOptionPane;
 
-import com.sun.xml.internal.ws.api.pipe.NextAction;
 
-import controller.ServletAdicionaUsuario;
 import exceptions.UsuarioException;
 
 
